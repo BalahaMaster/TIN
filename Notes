@@ -1,0 +1,16 @@
+Flexbox:
+
+justify-content - wrównuje elementy w poziomie -
+align-items - wyrównuje elementy w pionie |
+flex-direction - określa kierunek w jakim elementy są rozmieszone w kontenerze
+order - ustalenie kolejności elementów
+align-self: tak samo jak align-items, ale ma zastosowanie do jednego elementu
+flex-wrap: rozproszenie elementów
+flex-flow: flex-direction i flex-wrap w jednym
+align-content: odległość wierszy konetenera od siebie
+
+Grid:
+
+gird-column-start - ustawia elementy w pionie OD podanej wartości
+gird-column-end - ustawia elementy w pionie DO podanej wartości
+
