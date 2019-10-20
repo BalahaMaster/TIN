@@ -12,5 +12,18 @@ align-content: odległość wierszy konetenera od siebie
 Grid:
 
 gird-column-start - ustawia elementy w pionie OD podanej wartości
-gird-column-end - ustawia elementy w pionie DO podanej wartości
-
+gird-column-end - ustawia elementy w pionie DO podanej wartości, zamiast konretnej wartości, można użyć atrybutu span(działa tylko z pozytywnymi liczbami)
+grid-column - skrócona wersja powyższych komend. Wartości podajemy po / np grid-column: 2 / 4;
+grid-row-start: jak grid column start tylko dla wierszy
+grid-row-end: jak grid column end tylko dla wierszy
+grid-row: jak grid column tylko dla wierszy
+grid-area: skrócona wersja grid-row i grid-column. Paramtery: rstart / cstart / rend / cend
+order: domyślnie wszystkie komponenty mają order = 0
+grid-template-columns: ustawia ile column znajduje się gridzie 
+grid-template-rows: ustawia ile rows znajduje się gridzie
+do powyższych komend można użyć repeat(5, 20%)
+jednostki, których możemy używac poza procentami to także:
+px - piksle
+em - value od current font size
+fr - ułamek przestrzeni
+grid-template: skrócona werjsa gird-template-columns oraz grid-template-rows: najpierw podajemy rows potem '/' a potem columns
