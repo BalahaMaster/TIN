@@ -1,0 +1,12 @@
+.page{
+    
+}
+
+.header-home{
+    grid-template: 1 / 25% 50% 25%;  
+    height: 200px;  
+}
+
+.header-logo{
+    grid-row-start: 2;
+}
