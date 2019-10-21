@@ -1,14 +1,13 @@
 .page{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 100px 35px 20px 90% 100px;
-    background-color: darkslategrey;
+    grid-template-rows: 150px 35px 20px 90% 100px;
+    background-color: #FFE5D9;
 }
 
 .header{
     grid-area: 1 / 2 / 1 / 3;
-    height: 100px;  
-    background-color: s
+    height: 100%;
 }
 
 .header-logo{
@@ -16,11 +15,15 @@
     align-items: center;
     grid-row-start: 2;
     height: 70%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 5%;
+    padding-bottom: 5%;
     padding-left: 10%;
     padding-right: 10%;
     font-size: 300%;
     text-align: center;
-    margin-top: 5px;
+}
+
+.navbar{
+    grid-area: 2 / 1 / 2 / 4;
+    background-image: linear-gradient(to right ,#74226C, #4B2142);
 }
