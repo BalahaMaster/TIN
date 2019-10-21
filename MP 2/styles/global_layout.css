@@ -1,8 +1,8 @@
 .page{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 150px 35px 20px 90% 100px;
-    background-color: #FFE5D9;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 100px 35px 20px 900px 100px;
+    background-color: #FFFFFf;
 }
 
 .header{
@@ -15,8 +15,8 @@
     align-items: center;
     grid-row-start: 2;
     height: 70%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 15px;
+    padding-bottom: 35px;
     padding-left: 10%;
     padding-right: 10%;
     font-size: 300%;
@@ -25,5 +25,34 @@
 
 .navbar{
     grid-area: 2 / 1 / 2 / 4;
-    background-image: linear-gradient(to right ,#74226C, #4B2142);
+    background-color: black;
+    height: 50px;
+    display: flex;
+}
+
+.navbar-button{
+    height: 100%;
+    font-size: 100%;
+    color: white;
+    background-color: black;
+    width: 150px;
+    border: none;
+}
+
+
+.navbar-button:hover{
+    color: black;
+    background-image: linear-gradient(to right, white, silver);
+}
+
+#navbar-menu-items{
+    display: flex;
+    justify-content: flex-start;
+    width: 75%;
+}
+
+#navbar-menu-login{
+    display: flex;
+    justify-content: flex-end;
+    width: 25%;
 }
