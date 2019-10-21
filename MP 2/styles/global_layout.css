@@ -1,12 +1,26 @@
 .page{
-    
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 35px 20px 90% 100px;
+    background-color: darkslategrey;
 }
 
-.header-home{
-    grid-template: 1 / 25% 50% 25%;  
-    height: 200px;  
+.header{
+    grid-area: 1 / 2 / 1 / 3;
+    height: 100px;  
+    background-color: s
 }
 
 .header-logo{
+    justify-content: center;
+    align-items: center;
     grid-row-start: 2;
+    height: 70%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 300%;
+    text-align: center;
+    margin-top: 5px;
 }
