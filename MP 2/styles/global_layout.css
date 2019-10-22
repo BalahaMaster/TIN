@@ -11,7 +11,7 @@ body{
     min-height: 100%;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 100px 50px 20px auto 30px;
+    grid-template-rows: 100px 50px 30px auto 30px;
     background-color: #F4796B;
     /* background-image: linear-gradient(to left, #F4796B, #F397D6); */
 }
@@ -74,6 +74,8 @@ body{
     background-color: #846075; 
     width: 100%;
     color: #F7F06D;
+    padding-left: 15px;
+    padding-top: 5px;
 }
 
 .breadcrumbs:hover{
