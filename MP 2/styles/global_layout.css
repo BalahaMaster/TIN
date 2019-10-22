@@ -8,9 +8,10 @@ body{
 }
 
 .page{
+    min-height: 100%;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 100px 50px 20px fit-content;
+    grid-template-rows: 100px 50px 20px auto 30px;
     background-color: #F4796B;
     /* background-image: linear-gradient(to left, #F4796B, #F397D6); */
 }
@@ -85,6 +86,7 @@ body{
 }
 
 .footer{
+    grid-area: 5 / 2 / 5 / 3;
     justify-content:flex-end;
     color: black;
 }
