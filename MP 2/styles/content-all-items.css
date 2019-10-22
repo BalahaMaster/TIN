@@ -1,0 +1,7 @@
+.content-all-items{
+    display: grid;
+    grid-area: 2 / 2 / 3 / 3;
+    min-height: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: 150px auto 50px;
+}
