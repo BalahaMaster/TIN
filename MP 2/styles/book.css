@@ -2,7 +2,7 @@
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 2fr 2fr;
-    border-bottom: 1px solid black;
+    border-top: 1px solid black;
     padding: 15px;
 }
 
@@ -19,7 +19,7 @@
     display: inline;
     align-items: center;
     justify-content: flex-end;
-    height: 100%;
+    width: 100%;
 }
 
 .book-title{

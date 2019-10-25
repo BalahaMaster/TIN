@@ -88,16 +88,12 @@ body{
 
 .content{
     grid-area: 4 / 2 / 4 / 3;
-<<<<<<< HEAD
     background-color: white;
-=======
     background-color: #FFFFFF;
->>>>>>> 821b55d8ee4f5cb02236d06c14d1e62513be44c5
     display: grid;
     min-height: 100%;
-    grid-template-columns: 20% auto 20%;
+    grid-template-columns: minmax(auto, 10%) auto minmax(auto, 10%);
     grid-template-rows: 50px auto 50px;
-    border: 1px solid black;
 }
 
 .content-all-items{
@@ -121,6 +117,27 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 150%;
+}
+
+.content-item{
+    border: 1px solid black;
+}
+
+.content-item-list{    
+    border: 1px solid black;
+}
+
+.content-pagination{    
+    display: grid;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-left:  1px solid black;
+    justify-content: center;    
+    align-items: center;
+
+}
+.content-pagination a{
+    display: inline;
 }
 
 .footer{
