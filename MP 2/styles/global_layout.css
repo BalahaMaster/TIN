@@ -10,9 +10,13 @@ body{
 .page{
     min-height: 100%;
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 100px 50px 30px auto 30px;
+<<<<<<< HEAD
     background-color: white;;
+=======
+    background-color: white;
+>>>>>>> 821b55d8ee4f5cb02236d06c14d1e62513be44c5
     /* background-image: linear-gradient(to left, #F4796B, #F397D6); */
 }
 
@@ -84,16 +88,44 @@ body{
 
 .content{
     grid-area: 4 / 2 / 4 / 3;
+<<<<<<< HEAD
     background-color: white;
+=======
+    background-color: #FFFFFF;
+>>>>>>> 821b55d8ee4f5cb02236d06c14d1e62513be44c5
     display: grid;
     min-height: 100%;
-    grid-template-columns: 100px auto 100px;
+    grid-template-columns: 20% auto 20%;
     grid-template-rows: 50px auto 50px;
     border: 1px solid black;
+}
+
+.content-all-items{
+    display: grid;
+    grid-area: 2 / 2 / 3 / 3;
+    min-height: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: 100px auto 50px;
+}
+
+.content-add-button{
+    display: grid;
+    height: 60%;
+    width: 33%;
+    background-color: #4D2D52;
+}
+
+.add-button{
+    background-color: transparent;    
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
 }
 
 .footer{
     grid-area: 5 / 2 / 5 / 3;
     justify-content:flex-end;
+    font-size: 50;
     color: black;
 }
