@@ -29,14 +29,14 @@
     grid-area: 1 / 2 / 2 / 3;
     height: 100%;
     align-items: flex-start;
-    font-size: 100%;
+    font-size: 150%;
 }
 
 .book-price{
     display: grid;
     grid-area: 2 / 2 / 3 / 3;    
     align-items: center;
-    font-size: 100%;
+    font-size: 200%;
 }
 
 .book-buttons{
