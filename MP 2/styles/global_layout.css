@@ -4,7 +4,7 @@ html{
 
 body{
     display: inline;
-    background-color: #F4796B;
+    background-color: white;
 }
 
 .page{
@@ -12,7 +12,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 100px 50px 30px auto 30px;
-    background-color: #F4796B;
+    background-color: white;;
     /* background-image: linear-gradient(to left, #F4796B, #F397D6); */
 }
 
@@ -84,11 +84,12 @@ body{
 
 .content{
     grid-area: 4 / 2 / 4 / 3;
-    background-color: #9D6381;
+    background-color: white;
     display: grid;
     min-height: 100%;
     grid-template-columns: 100px auto 100px;
     grid-template-rows: 50px auto 50px;
+    border: 1px solid black;
 }
 
 .footer{
