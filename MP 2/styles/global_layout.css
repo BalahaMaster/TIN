@@ -4,15 +4,15 @@ html{
 
 body{
     display: inline;
-    background-color: #F4796B;
+    background-color: white;
 }
 
 .page{
     min-height: 100%;
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 100px 50px 30px auto 30px;
-    background-color: #F4796B;
+    background-color: white;
     /* background-image: linear-gradient(to left, #F4796B, #F397D6); */
 }
 
@@ -84,11 +84,26 @@ body{
 
 .content{
     grid-area: 4 / 2 / 4 / 3;
-    background-color: #9D6381;
+    background-color: #FFFFFF;
     display: grid;
     min-height: 100%;
-    grid-template-columns: 100px auto 100px;
+    grid-template-columns: 20% auto 20%;
     grid-template-rows: 50px auto 50px;
+}
+
+.content-all-items{
+    display: grid;
+    grid-area: 2 / 2 / 3 / 3;
+    min-height: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: 100px auto 50px;
+}
+
+.content-add-button{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
 }
 
 .footer{
