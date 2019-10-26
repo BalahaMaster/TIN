@@ -183,12 +183,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 100px 50px 30px auto 30px;
-<<<<<<< HEAD
-    background-color: white;;
-=======
     background-color: white;
->>>>>>> 821b55d8ee4f5cb02236d06c14d1e62513be44c5
-    /* background-image: linear-gradient(to left, #F4796B, #F397D6); */
 }
 
 .header{
@@ -273,6 +268,14 @@ body{
     min-height: 100%;
     grid-template-columns: auto;
     grid-template-rows: 100px auto 50px;
+}
+
+.onepage-notification{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    grid-area: 2 / 1 / 3 / 2;
 }
 
 .content-add-button{
