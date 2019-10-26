@@ -127,17 +127,20 @@ body{
     border: 1px solid black;
 }
 
-.content-pagination{    
+.content-footer{    
     display: grid;
     border-bottom: 1px solid black;
     border-right: 1px solid black;
-    border-left:  1px solid black;
-    justify-content: center;    
+    border-left:  1px solid black; 
+    justify-content: center;
     align-items: center;
-
 }
-.content-pagination a{
-    display: inline;
+.content-pagination{
+    margin: auto;
+    justify-content: center;
+}
+#item-number-select{
+    justify-content: center;
 }
 
 .footer{
