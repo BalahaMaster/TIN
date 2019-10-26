@@ -1,0 +1,110 @@
+.content-frame{
+    display: grid;
+    grid-area: 2 / 2 / 3 / 3;
+    height: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 2fr auto auto auto;
+    border: 1px solid black;
+}
+
+#add-book-header{
+    display: grid;
+}
+
+#add-book-header #header{
+    display: grid;
+    justify-content: center;
+    align-self: center;
+    font-size: 50px;
+}
+#add-book-header #description{
+    height: auto;
+}
+
+.attribute-frame{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  1fr 1fr;
+    margin-top: 50px;
+}
+
+.attribute-frame .attribute{
+    display: grid;
+    padding: 10px;
+    grid-template-columns: auto;
+    grid-template-rows: 40% 40% 20%;
+}
+
+.medium-label{
+    display: grid;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.attribute input{
+    width: 50%;
+    font-size: 20px;
+}
+
+.attribute-table{
+    display: grid;
+    padding: 10px;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    align-items: flex-start;
+    height: auto;
+}
+
+.selectable-table{
+    border: 1px solid black;
+    height: auto;
+}
+
+.selectable-table thead{
+    border: 1px solid black;
+    background-color: #4D2D52;
+    color: white;
+}
+
+.selectable-table th, .selectable-table td{
+    margin: 5px;
+    height: 25px;
+}
+
+.selectable-table tr{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.selectable-table tbody tr:hover{
+    background-color: lightgray;
+}
+
+.tr-selected{
+    background-color: gray;
+}
+
+.attribute-table-button{
+    display: inline;
+    padding-top: 10px;
+}
+.medium-button{
+    height: 40px;
+    width: 200px;
+    color: white;
+    background-color: #4D2D52;
+    margin-right: 20px;
+}
+
+.content-buttons{
+    display: grid;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.content-buttons div{
+    display: inline-block;
+    padding: 20px;
+}
