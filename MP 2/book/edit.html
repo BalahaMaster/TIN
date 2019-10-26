@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/global_layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/add.css"/>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">      
+          <div class="header-logo">Biblioteka</div>
+      </header>
+      <div class="navbar">
+        <div id="navbar-menu-items">
+          <button class=navbar-button>Strona Główna</button>
+          <button class=navbar-button>Książki</button>
+          <button class=navbar-button>Wypożyczenia</button>
+          <button class=navbar-button>Klienci</button>
+          <button class=navbar-button>Autorzy</button>
+        </div>
+        <div id="navbar-menu-login">
+          <button class=navbar-button id="navbar-login">Logowanie</button>
+        </div>
+      </div>
+      <div class="breadcrumbs">Strona Główna</div>
+      <div class="content">
+        <div class="content-frame">
+            <div id="add-book-header">
+                <div id="header">Edytuj Ksiązkę</div>
+                <div id="description">Wypełnij poniższy formularz a następnie kliknij przycisk "Dodaj"<br>Kliknij przycisk 'Anuluj', jeżeli chcesz wrócić do listy książek</div>
+            </div>
+            <div class="attribute-frame">
+                <div class="attribute" id="title">
+                    <label class="medium-label" for="title">Title</label>
+                    <input type="text" id="title-input" name="title"></input>
+                    <span class="errorfield" id="title-error"></span>
+                </div>
+                <div class="attribute" id="release-date">
+                    <label class="medium-label" for="release-date">Release Date</label>
+                    <input type="date" id="release-date-input" name="release-date"></input>
+                    <span class="errorfield" id="release-date-error"></span>
+                </div>
+                <div class="attribute" id="isbn">
+                    <label class="medium-label" for="title">Isbn</label>
+                    <input type="text" id="isbn-input" name="isbn"></input>
+                    <span class="errorfield" id="isbn-error"></span>
+                </div>
+                <div class="attribute" id="price">
+                    <label class="medium-label" for="title">Price</label>
+                    <input type="text" id="price-input" name="price"></input>
+                    <span class="errorfield" id="price-error"></span>
+                </div>
+            </div>
+            <div class="attribute-table" id="table-autors">
+                <label class="medium-label" for="autors">Autorzy</label>
+                <table class="selectable-table" id="autors" name="autors">
+                    <thead>
+                        <tr>
+                            <th>Imię</th>
+                            <th>Nazwisko</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Stephen</td>
+                            <td>King</td>
+                        </tr>
+                        <tr>
+                            <td>Marcin</td>
+                            <td>Maziarz</td>
+                        </tr>
+                        <tr>
+                            <td>Stephen</td>
+                            <td>King</td>
+                        </tr>
+                        <tr>
+                            <td>Marcin</td>
+                            <td>Maziarz</td>
+                        </tr>
+                        <tr>
+                            <td>Stephen</td>
+                            <td>King</td>
+                        </tr>
+                        <tr>
+                            <td>Marcin</td>
+                            <td>Maziarz</td>
+                        </tr>
+                        <tr>
+                            <td>Stephen</td>
+                            <td>King</td>
+                        </tr>
+                        <tr>
+                            <td>Marcin</td>
+                            <td>Maziarz</td>
+                        </tr>
+                        <tr>
+                            <td>Stephen</td>
+                            <td>King</td>
+                        </tr>
+                        <tr>
+                            <td>Marcin</td>
+                            <td>Maziarz</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="attribute-table-button">
+                    <button class="medium-button" href="#">Dodaj Autora</button>
+                    <button class="medium-button" href="#">Usuń Autora</button>
+                </div>
+            </div>
+            <div class="attribute-table" id="table-copies">
+                <label class="medium-label" for="autors">Egzemplarze</label>
+                <table class="selectable-table" id="autors" name="autors">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Wypożyczony</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Nie</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Nie</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Nie</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="attribute-table-button">
+                    <button class="medium-button" href="#">Dodaj Autora</button>
+                    <button class="medium-button" href="#">Usuń Autora</button>
+                </div>
+            </div>
+            <div class="content-buttons">
+                <div>
+                    <button class="medium-button">Anuluj</button>
+                    <button class="medium-button">Zapisz</button>
+                </div>
+            
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">System do zarządzanie biblioteką 2019</div>
+  </div>
+</body>
+</html>
