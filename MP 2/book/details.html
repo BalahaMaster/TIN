@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css"/>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">      
+          <div class="header-logo">Biblioteka</div>
+      </header>
+      <div class="navbar">
+        <div id="navbar-menu-items">
+          <button class=navbar-button>Strona Główna</button>
+          <button class=navbar-button>Książki</button>
+          <button class=navbar-button>Wypożyczenia</button>
+          <button class=navbar-button>Klienci</button>
+          <button class=navbar-button>Autorzy</button>
+        </div>
+        <div id="navbar-menu-login">
+          <button class=navbar-button id="navbar-login">Logowanie</button>
+        </div>
+      </div>
+      <div class="breadcrumbs">Strona Główna</div>
+      <div class="content">
+        <div id="book-details-content-frame">
+            <div id="attributes">
+                <div id="cover">
+                    <img class="book-cover" src="https://ecsmedia.pl/c/wladca-pierscieni-tom-2-dwie-wieze-w-iext48097233.jpg">
+                </div>
+                <div id="title">Władca Pierścieni: Dwie wieże</div>
+                <div id="attribute-list">
+                    <div id="attribute">
+                        <div id="attribute-name">Autorzy:</div>
+                        <div id="autors">J.R.R. Tolkien</div>
+                    </div>
+                    <div id="attribute">
+                        <div id="attribute-name">Data wydania:</div>
+                        <div id="release-date">11-11-1954</div>
+                    </div>
+                    <div id="attribute">
+                        <div id="attribute-name">ISBN:</div>
+                        <div id="isbn">978-2-12-345680-3</div>
+                    </div>
+                    <div id="attribute">
+                        <div id="attribute-name">Cena za dzień</div>
+                        <div id="price">3</div>
+                    </div>
+                </div>
+                <div id="rental-count">
+                    <div id="attribute-name">Liczba wolnych egzemplarzy:</div>
+                </div>                
+                <div id=count>13</div>
+            </div>
+            <div id="rents">
+                <label class="medium-label" for="rents-table">Wypożyczenia</label>
+                <table class="selectable-table" id="rents-table" name="Wypożyczenia">
+                    <thead>
+                        <tr>
+                            <th>Id Wypożyczenia</th>
+                            <th>Stan</th>
+                            <th>Id Egzemplarza</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">1233</a></td>
+                            <td>Zwrócne</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">333</a></td>
+                            <td>Nie zwrócone</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="buttons">
+                <button class="medium-button">Powrót</button>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">System do zarządzanie biblioteką 2019</div>
+  </div>
+</body>
+</html>
