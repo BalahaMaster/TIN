@@ -37,7 +37,7 @@
     font-size: 200%;
 }
 
-.book-buttons{
+.list-item-buttons{
     display: flex;
     grid-area: 3 / 2 / 4 / 3;
     justify-content: flex-start;
@@ -45,7 +45,7 @@
     flex-direction: row;
 }
 
-.book-button{
+.list-item-button{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -504,8 +504,16 @@ body{
 }
 
 #add-with-search #buttons{
-    display: grid;
+    display: inline-block;
     grid-area: 4 / 1 / 5 / 2;
     justify-content: flex-end;
     padding-bottom: 10px;
+}
+
+.rent-item{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
+    border-top: 1px solid black;
+    padding: 15px;
 }
