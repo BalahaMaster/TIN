@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css"/>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">      
+          <div class="header-logo">Biblioteka</div>
+      </header>
+      <div class="navbar">
+        <div id="navbar-menu-items">
+          <button class=navbar-button>Strona Główna</button>
+          <button class=navbar-button>Książki</button>
+          <button class=navbar-button>Wypożyczenia</button>
+          <button class=navbar-button>Klienci</button>
+          <button class=navbar-button>Autorzy</button>
+        </div>
+        <div id="navbar-menu-login">
+          <button class=navbar-button id="navbar-login">Logowanie</button>
+        </div>
+      </div>
+      <div class="breadcrumbs">Strona Główna</div>
+      <div class="content">
+        <div class="content-frame" id="add-rent-frame">
+            <div class="content-header" id="add-rent-header">
+                <div id"header">Wypożycz</div>
+            </div>
+            <div class="content-data" id="add-rent-data">
+                <div class="attribute-table" id="table-clients">
+                    <label class="medium-label" for="clients">Klienci</label>
+                    <table class="selectable-table" id="clients" name="clients">
+                        <thead>
+                            <tr>
+                                <th>Imię</th>
+                                <th>Nazwisko</th>
+                                <th>Data Urodzenia</th>
+                                <th>ID</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jan</td>
+                                <td>Kowalski</td>
+                                <td>01-01-1969</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="attribute-table-button">
+                        <button class="medium-button" href="#">Dodaj Klienta</button>
+                        <button class="medium-button" href="#">Usuń Klienta</button>
+                    </div>
+                </div>
+                <div class="attribute-table" id="table-copies">
+                    <label class="medium-label" for="copies">Książki</label>
+                    <table class="selectable-table" id="copies" name="copies">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Autor</th>
+                                <th>ISBN</th>
+                                <th>ID Egzemplarza</th>
+                                <th>Cena</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Jan Nowak</td>
+                                <td>12321-32312-1321-3</td>
+                                <td>13</td>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="attribute-table-button">
+                        <button class="medium-button" href="#">Dodaj Autora</button>
+                        <button class="medium-button" href="#">Usuń Autora</button>
+                    </div>
+                </div>
+            </div>
+            <div class="content-buttons"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">System do zarządzanie biblioteką 2019</div>
+  </div>
+</body>
+</html>
