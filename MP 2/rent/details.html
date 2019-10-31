@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css"/>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">      
+          <div class="header-logo">Biblioteka</div>
+      </header>
+      <div class="navbar">
+        <div id="navbar-menu-items">
+          <button class=navbar-button>Strona Główna</button>
+          <button class=navbar-button>Książki</button>
+          <button class=navbar-button>Wypożyczenia</button>
+          <button class=navbar-button>Klienci</button>
+          <button class=navbar-button>Autorzy</button>
+        </div>
+        <div id="navbar-menu-login">
+          <button class=navbar-button id="navbar-login">Logowanie</button>
+        </div>
+      </div>
+      <div class="breadcrumbs">Strona Główna</div>
+      <div class="content">
+        <div class="content-frame" id="add-book-frame">
+            <div class="content-header" id="add-book-header">
+                <div id="header">Wypożyczenie</div>
+            </div>
+            <div class="content-data" id="details-rent-content-data">
+                <div class="attribute-frame" id="details-rent-attribute-frame">
+                    <div id="attribute-list">
+                        <div id="attribute">
+                            <div id="attribute-name">ID Wypozyczenia:</div>
+                            <div id="rent-id">1</div>
+                        </div>
+                        <div id="attribute">
+                            <div id="attribute-name">Data wypożyczenia:</div>
+                            <div id="rent-date">11-11-2044</div>
+                        </div>
+                        <div id="attribute">
+                            <div id="attribute-name">Kwota do zapłaty:</div>
+                            <div id="price">978 zł</div>
+                        </div>
+                        <div id="attribute">
+                            <div id="attribute-name">Data zwrotu:</div>
+                            <div id="return-date"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="attribute-table" id="table-clients">
+                    <label class="medium-label" for="clients">Klienci</label>
+                    <table class="selectable-table" id="clients" name="clients">
+                        <thead>
+                            <tr>
+                                <th>Imię</th>
+                                <th>Nazwisko</th>
+                                <th>Data Urodzenia</th>
+                                <th>ID</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jan</td>
+                                <td>Kowalski</td>
+                                <td>01-01-1969</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="attribute-table" id="table-copies">
+                    <label class="medium-label" for="copies">Książki</label>
+                    <table class="selectable-table" id="copies" name="copies">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Autor</th>
+                                <th>ISBN</th>
+                                <th>ID Egzemplarza</th>
+                                <th>Cena</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Jan Nowak</td>
+                                <td>12321-32312-1321-3</td>
+                                <td>13</td>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                    
+            </div>
+            <div class="content-footer">
+                <div  id="add-book-footer">
+                    <button class="medium-button">Wróć do listy</button>
+                    <button class="medium-button">Usuń</button>
+                    <button class="medium-button">Edytuj</button>
+                    <button class="medium-button">Zwróć</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">System do zarządzanie biblioteką 2019</div>
+  </div>
+</body>
+</html>

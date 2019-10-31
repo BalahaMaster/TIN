@@ -110,6 +110,12 @@
     grid-template-rows: auto auto;
 }
 
+#details-rent-content-data{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+}
+
 .content-footer{
     display: grid;
     grid-area: 3 / 1 / 4 / 2;
@@ -147,6 +153,25 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows:  1fr 1fr;
 }
+
+#details-rent-attribute-frame #attribute-list{
+    display: grid;
+    grid-area: 1/1/2/2;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  1fr 1fr;
+}
+
+#details-rent-attribute-frame #attribute-list #attribute{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+#details-rent-attribute-frame #attribute-list #attribute-name{
+    font-weight: 700;
+    margin-right: 20px;
+}
+
 
 #add-book-attribute-frame .attribute{
     display: grid;
@@ -609,3 +634,4 @@ body{
     align-self: center;
     flex-direction: row;
 }
+
