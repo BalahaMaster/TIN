@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+</head>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="header-logo">Biblioteka</div>
+        </header>
+        <div class="navbar">
+            <div id="navbar-menu-items">
+                <button class=navbar-button>Strona Główna</button>
+                <button class=navbar-button>Książki</button>
+                <button class=navbar-button>Wypożyczenia</button>
+                <button class=navbar-button>Klienci</button>
+                <button class=navbar-button>Autorzy</button>
+            </div>
+            <div id="navbar-menu-login">
+                <button class=navbar-button id="navbar-login">Logowanie</button>
+            </div>
+        </div>
+        <div class="breadcrumbs">Strona Główna</div>
+        <div class="content">
+            <div class="content-frame" id="add-book-frame">
+                <div class="content-header" id="add-book-header">
+                    <div id="header">Dodaj Ksiązkę</div>
+                    <div id="description">Wypełnij poniższy formularz a następnie kliknij przycisk "Dodaj"<br>Kliknij
+                        przycisk 'Anuluj', jeżeli chcesz wrócić do listy książek</div>
+                </div>
+                <div class="content-data" id="add-book-content">
+                    <div class="attribute-frame" id="add-book-attribute-frame">
+                        <div class="attribute" id="title">
+                            <label class="medium-label" for="title">Imie</label>
+                            <input type="text" id="title-input" name="title"></input>
+                            <span class="errorfield" id="title-error"></span>
+                        </div>
+                        <div class="attribute" id="release-date">
+                            <label class="medium-label" for="release-date">Data Urodzenia</label>
+                            <input type="date" id="release-date-input" name="release-date"></input>
+                            <span class="errorfield" id="release-date-error"></span>
+                        </div>
+                        <div class="attribute" id="isbn">
+                            <label class="medium-label" for="title">Nazwisko</label>
+                            <input type="text" id="isbn-input" name="isbn"></input>
+                            <span class="errorfield" id="isbn-error"></span>
+                        </div>
+                        <div class="attribute" id="price">
+                            <label class="medium-label" for="title">Adres Email</label>
+                            <input type="text" id="price-input" name="price"></input>
+                            <span class="errorfield" id="price-error"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-footer">
+                    <div id="add-book-footer">
+                        <button class="medium-button">Anuluj</button>
+                        <button class="medium-button">Zapisz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">System do zarządzanie biblioteką 2019</div>
+    </div>
+</body>
+
+</html>

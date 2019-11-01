@@ -379,8 +379,9 @@ body{
     align-items: center;
 }
 
-.content-item{
-
+#list-rent-add-button{
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .content-item-list{    
@@ -424,10 +425,52 @@ body{
     height: 100%;
 }
 
+#client-details-content-frame{
+    display: grid;
+    grid-area: 2/2/3/3;
+    grid-auto-columns: auto;
+    grid-template-rows: auto auto auto;
+    border: 1px solid black;
+    height: 100%;
+}
+
+#cclient-details-content-frame #attributes{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#client-details-content-frame #attributes #attribute-list{
+    display: grid;
+    grid-area: 1 / 1 / 2 / 2;    
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+#client-details-content-frame #attributes #attribute-list #attribute{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 5px;
+}
+
+#client-details-content-frame #attributes #attribute-name{
+    margin-right: 20px;
+    font-weight: 700;
+}
+
+
+#client-details-content-frame #buttons{
+    display: flex;
+    margin: 2%;
+    justify-content: flex-end;
+}
+
 #book-details-content-frame #attributes{
     display: grid;
     grid-template-columns: minmax(200px, auto) minmax(500px, auto) auto
 }
+
+
 
 #book-details-content-frame #attributes #cover{
     display: grid;
@@ -444,7 +487,6 @@ body{
 #book-details-content-frame #attributes #attribute-list{
     display: grid;
     grid-area: 2 / 2 / 6/ 3;
-    
 }
 
 #book-details-content-frame #attributes #attribute-list #attribute{
@@ -580,6 +622,15 @@ body{
     font-size: 20px;
     align-items: center;
     flex-wrap: nowrap;
+    min-width: 100%;
+}
+
+#client-item{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-column: auto;
+    font-size: 20px;
+    align-items: center;
     min-width: 100%;
 }
 
