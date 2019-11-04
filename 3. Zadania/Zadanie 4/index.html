@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="../scripts.js"></script>
+    <style>
+    .redborder{ border: 1px solid red; }
+    </style>
+  </head>
+  <body>
+    <form name="myForm" style="width: 100px; display: grid;">
+        <label for="firstname">Podaj imie kurwo</label>
+        <input id="firstname" type="text"></input>
+        <span id="firstname-valerr"></span>
+        <label for="lastname">Dej nazwisko</label>
+        <input id="lastname" type="text"></input>
+        <span id="lastname-valerr"></span>
+        <label for="state">Status</label>
+        <input id="state" typ="text"></input>
+        <span id="state-valerr"></span>
+        <input type="button" onclick="add_person(firstname, lastname, state)" value="Dodaj"></input>
+    </form>
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th>Imie</th>
+                <th>Nazwisko</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Wojtek</td> 
+                <td>Rogman</td>
+                <td>Cwel</td>   
+            </tr>
+        </tbody>
+    </table>         
+  </body>
+</html>
