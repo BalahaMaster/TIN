@@ -10,3 +10,7 @@ function temp_convertion(){
     }
     document.getElementById("result").innerHTML = result;
 }
+
+function paragraph_delay(){
+    document.getElementById("zajebisty-paragraf").style.visibility = "visible";
+}
