@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css"/>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">      
+          <div class="header-logo">Biblioteka</div>
+      </header>
+      <div class="navbar">
+        <div id="navbar-menu-items">
+          <button class=navbar-button>Strona Główna</button>
+          <button class=navbar-button>Książki</button>
+          <button class=navbar-button>Wypożyczenia</button>
+          <button class=navbar-button>Klienci</button>
+          <button class=navbar-button>Autorzy</button>
+        </div>
+        <div id="navbar-menu-login">
+          <button class=navbar-button id="navbar-login">Logowanie</button>
+        </div>
+      </div>
+      <div class="breadcrumbs">Strona Główna</div>
+      <div class="content">
+        <div class="content-frame">
+          <div class="content-header">
+            <div class="content-add-button">
+             <button class="add-button">Wypożycz ksiązkę</button>
+            </div>
+          </div>
+          <div class="content-data">
+            <div class="content-item-list">
+              <div class="content-item" id="rent-item">
+                <div class="rent-client-name"><span style="font-weight: 700" id="attribute-name">Klient: </span><span>Marcin Maziarz</span></div>
+                <div class="rent-book-title"><span style="font-weight: 700" id="attribute-name">Tytuł: </span><span>Władca Pierścieni: Dwie Wieże</span></div>
+                <div class="rent-start-date"><span style="font-weight: 700" id="attribute-name">Data Wypozyczenia: </span><span>10-11-2137</span></div>
+                <div class="rent-end-date"><span style="font-weight: 700" id="attribute-name">Data Zwrotu: </span><span>12-11-2137</span></div>
+                <div class="rent-id"><span style="font-weight: 700" id="attribute-name">Id Wypożyczenia: </span><span>1</span></div>
+                <div class="list-item-buttons" id="list-item-rent-buttons">
+                  <a href="#" class="list-item-button">Edytuj</a>
+                  <a  href="#" class="list-item-button">Usuń</a>
+                  <a  href="#" class="list-item-button">Pokaż więcej</a>
+                </div>
+              </div>
+            </div>   
+          </div>
+          <div class="content-footer">
+            <div class="content-pagination">
+              <a href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+            </div>   
+            <div id="item-number-select">                
+            <span>Wybierz ilość książek na stronie</span>
+              <select>
+                <option value="5">5</option>
+                <option value="10">10</option>
+              </select>
+            </div>  
+          </div>          
+        </div>
+        
+      </div>
+    </div>
+    <div class="footer">System do zarządzanie biblioteką 2019</div>
+  </div>
+</body>
+</html>
