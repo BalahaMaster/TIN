@@ -14,3 +14,12 @@ function temp_convertion(){
 function paragraph_delay(){
     document.getElementById("zajebisty-paragraf").style.visibility = "visible";
 }
+
+function add_person(firstname, lastname, state){
+    var table = document.getElementById("tabela");
+    var lastRow = table.rows.length;
+    var row = table.insertRow(lastRow);
+    row.insertCell(0).innerHTML = firstname.value;
+    row.insertCell(1).innerHTML = lastname.value;
+    row.insertCell(2).innerHTML = state.value;
+}
