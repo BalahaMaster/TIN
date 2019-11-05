@@ -6,6 +6,17 @@
     padding: 15px;
 }
 
+input{
+
+}
+
+.input-notvalid{
+    border: 1px red solid;
+}
+
+.errorfield{
+    color: red;
+}
 
 .book-cover-container{
     display: grid;  
