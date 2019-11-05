@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="../scripts.js"></script>
+  </head>
+  <body>
+    <form >
+        <label for="firstname">Podaj imie kurwo</label>
+        <input id="firstname" type="text"></input>
+        <label for="lastname">Dej nazwisko</label>
+        <input id="lastname" type="text"></input>
+        <label for="state">Status</label>
+        <input id="state" typ="text"></input>
+        <input type="button" onclick="add_person(firstname, lastname, state)" value="Dodaj"></input>
+    </form>
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th>Imie</th>
+                <th>Nazwisko</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Wojtek</td> 
+                <td>Rogman</td>
+                <td>Cwel</td>   
+            </tr>
+        </tbody>
+    </table>         
+  </body>
+</html>
