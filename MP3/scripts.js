@@ -26,6 +26,24 @@ function validateClient(){
             elementAddText(birthDateErr, "Klient musi mieć przynajmniej 18 lat");
         }
     }
+
+    var email = document.getElementById("email-input");
+    var emailErr = document.getElementById("email-error");
+    elementClearText(emailErr);
+    emailValidation(email, emailErr);
+}
+
+function emailValidation(inputElement, errorElement){
+
+    var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if(!inputElement.value.match(regex)){
+        elementValidationError(inputElement);
+        elementAddText(errorElement, "Niepoprawny adres email");
+    }
+    else{
+        elementValidationOk(inputElement)
+    }
 }
 
 function emptyStringValidation(inputElement, errorElement, message){
