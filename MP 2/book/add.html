@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../styles/styles.css"/>
+    <script type="text/javascript" src="../../MP 3/scripts.js"></script>
   </head>
   <body>
     <div class="page">
@@ -32,22 +33,22 @@
             <div class="content-data" id="add-book-content">
                 <div class="attribute-frame" id="add-book-attribute-frame">
                     <div class="attribute" id="title">
-                        <label class="medium-label" for="title">Title</label>
+                        <label class="medium-label" for="title">Tytuł</label>
                         <input type="text" id="title-input" name="title"></input>
                         <span class="errorfield" id="title-error"></span>
                     </div>
                     <div class="attribute" id="release-date">
-                        <label class="medium-label" for="release-date">Release Date</label>
-                        <input type="date" id="release-date-input" name="release-date"></input>
+                        <label class="medium-label" for="release-date">Data wydania</label>
+                        <input type="text" id="release-date-input" name="release-date"></input>
                         <span class="errorfield" id="release-date-error"></span>
                     </div>
                     <div class="attribute" id="isbn">
-                        <label class="medium-label" for="title">Isbn</label>
+                        <label class="medium-label" for="isbn">ISBN</label>
                         <input type="text" id="isbn-input" name="isbn"></input>
                         <span class="errorfield" id="isbn-error"></span>
                     </div>
                     <div class="attribute" id="price">
-                        <label class="medium-label" for="title">Price</label>
+                        <label class="medium-label" for="price">Cena za dzień</label>
                         <input type="text" id="price-input" name="price"></input>
                         <span class="errorfield" id="price-error"></span>
                     </div>
@@ -62,10 +63,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Stephen</td>
-                                <td>King</td>
-                            </tr>
                         </tbody>
                     </table>
                     <div class="attribute-table-button">
@@ -78,35 +75,22 @@
                     <table class="selectable-table" id="autors" name="autors">
                         <thead>
                             <tr>
-                                <th>Id</th>
-                                <th>Wypożyczony</th>
+                                <th>Numer</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Nie</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Nie</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Nie</td>
-                            </tr>
                         </tbody>
                     </table>
                     <div class="attribute-table-button">
-                        <button class="medium-button" href="#">Dodaj Autora</button>
-                        <button class="medium-button" href="#">Usuń Autora</button>
+                        <button class="medium-button" href="#">Dodaj Egzemplarz</button>
+                        <button class="medium-button" href="#">Usuń Egzemplarz</button>
                     </div>
                 </div>
             </div>
             <div class="content-footer">
                 <div  id="add-book-footer">
                     <button class="medium-button">Anuluj</button>
-                    <button class="medium-button">Zapisz</button>
+                    <button class="medium-button" onclick="validateBook()">Zapisz</button>
                 </div>
             </div>
         </div>

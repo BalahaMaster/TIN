@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+    <script type="text/javascript" src="../../MP 3/scripts.js"></script>
 </head>
 
 <body>
@@ -34,32 +35,32 @@
                 </div>
                 <div class="content-data" id="add-book-content">
                     <div class="attribute-frame" id="add-book-attribute-frame">
-                        <div class="attribute" id="title">
-                            <label class="medium-label" for="title">Imie</label>
-                            <input type="text" id="title-input" name="title"></input>
-                            <span class="errorfield" id="title-error"></span>
+                        <div class="attribute" id="firstname">
+                            <label class="medium-label" for="firstname">Imię</label>
+                            <input type="text" id="firstname-input" name="firstname"></input>
+                            <span class="errorfield" id="firstname-error"></span>
                         </div>
-                        <div class="attribute" id="release-date">
-                            <label class="medium-label" for="release-date">Data Urodzenia</label>
-                            <input type="date" id="release-date-input" name="release-date"></input>
-                            <span class="errorfield" id="release-date-error"></span>
+                        <div class="attribute" id="birthdate">
+                            <label class="medium-label" for="birthdate">Data Urodzenia</label>
+                            <input type="text" id="birthdate-input" name="birthdate"></input>
+                            <span class="errorfield" id="birthdate-error"></span>
                         </div>
-                        <div class="attribute" id="isbn">
-                            <label class="medium-label" for="title">Nazwisko</label>
-                            <input type="text" id="isbn-input" name="isbn"></input>
-                            <span class="errorfield" id="isbn-error"></span>
+                        <div class="attribute" id="lastname">
+                            <label class="medium-label" for="lastname">Nazwisko</label>
+                            <input type="text" id="lastname-input" name="lastname"></input>
+                            <span class="errorfield" id="lastname-error"></span>
                         </div>
-                        <div class="attribute" id="price">
-                            <label class="medium-label" for="title">Adres Email</label>
-                            <input type="text" id="price-input" name="price"></input>
-                            <span class="errorfield" id="price-error"></span>
+                        <div class="attribute" id="email">
+                            <label class="medium-label" for="email">Adres Email</label>
+                            <input type="text" id="email-input" name="email"></input>
+                            <span class="errorfield" id="email-error"></span>
                         </div>
                     </div>
                 </div>
                 <div class="content-footer">
                     <div id="add-book-footer">
                         <button class="medium-button">Anuluj</button>
-                        <button class="medium-button">Zapisz</button>
+                        <button class="medium-button" onclick="validateClient()">Zapisz</button>
                     </div>
                 </div>
             </div>

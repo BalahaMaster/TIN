@@ -33,6 +33,64 @@ function validateClient(){
     emailValidation(email, emailErr);
 }
 
+function validateBook(){
+    var title = document.getElementById("title-input");
+    var titleErr = document.getElementById("title-error");
+    elementClearText(titleErr);
+    emptyStringValidation(title, titleErr, "Tytuł nie może być pusty")
+
+    var isbn = document.getElementById("isbn-input");
+    var isbnErr = document.getElementById("isbn-error");
+    elementClearText(isbnErr);
+    emptyStringValidation(isbn, isbnErr, "ISBN nie może być pusty")
+
+    var releaseDate = document.getElementById("release-date-input");
+    var releaseDateErr = document.getElementById("release-date-error");
+    elementClearText(releaseDateErr);
+    emptyStringValidation(releaseDate, releaseDateErr, "Data wydania nie może być pusta");
+    if(dateFormatValidation(releaseDate, releaseDateErr, "Podaj datę w następującym formacie: 2019(rok)-01(miesiąć)-01(dzień)")){
+        if(new Date(releaseDate.value) > Date.now()){
+            elementValidationError(releaseDateErr);
+            elementAddText("Data wydania nie może być większa od daty dzisiejszej");
+        }
+    }
+
+    var price = document.getElementById("price-input");
+    var priceErr = document.getElementById("price-error");
+    elementClearText(priceErr);
+    emptyStringValidation(price, priceErr, "Cena nie może być pusta")
+    positiveNumberValidation(price, priceErr);
+}
+
+function positiveNumberValidation(element, errorElement){
+    
+    var number = element.value;
+
+    console.log(number);
+
+    var reg = /(?<!.)([0-9]+|[0-9]+\.{1}[0-9]+)(?!.)/
+
+    var matches = number.match(reg);
+
+    if(matches == false || matches == null){
+        elementValidationError(element);
+        elementAddText(errorElement, "Podana liczba może zawierać tylko liczby naturalne i może być rozdzielona kropką");
+        return false;
+    }
+    
+    number = parseFloat(number);
+
+    if(isNaN(number)){
+        elementValidationError(element);
+        elementAddText(errorElement, "Podaj liczbę w formacie '3.14' bądź '1'");
+    }
+    
+    if(number < 0){
+        elementValidationError(element);
+        elementAddText(errorElement, "Liczba musi być większa od zera");
+    }
+}
+
 function emailValidation(inputElement, errorElement){
 
     var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
