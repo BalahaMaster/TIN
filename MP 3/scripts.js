@@ -58,8 +58,26 @@ function validateBook(){
     var price = document.getElementById("price-input");
     var priceErr = document.getElementById("price-error");
     elementClearText(priceErr);
-    emptyStringValidation(price, priceErr, "Cena nie może być pusta")
+    emptyStringValidation(price, priceErr, "Cena nie może być pusta");
     positiveNumberValidation(price, priceErr);
+
+    var authors = document.getElementById("authors");
+    var authorsErr = document.getElementById("table-authors-error");
+    elementClearText(priceErr);
+    console.log(authors.rows.length);
+    if(authors.rows.length < 2){
+        elementValidationError(authors);
+        elementAddText(authorsErr, "Ksiązka musi posiadać przynajmniej jednego autora");
+    }
+
+    var copies = document.getElementById("table-copies");
+    var copiesErr = document.getElementById("table-copies-error");
+    elementClearText(copiesErr);
+    console.log(copies.rows.length);
+    if(copies.rows.length < 2){
+        elementValidationError(copies);
+        elementAddText(copiesErr, "Ksiązka musi posiadać przynajmniej jednen egzemplarz");
+    }
 }
 
 function positiveNumberValidation(element, errorElement){
@@ -105,7 +123,6 @@ function emailValidation(inputElement, errorElement){
 }
 
 function emptyStringValidation(inputElement, errorElement, message){
-
     var validation;
 
     validation = validateStringNotEmpty(inputElement.value);
