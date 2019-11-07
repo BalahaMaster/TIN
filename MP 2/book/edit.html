@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../styles/styles.css"/>
+    <script type="text/javascript" src="../../MP 3/scripts.js"></script>
   </head>
   <body>
     <div class="page">
@@ -26,7 +27,7 @@
       <div class="content">
         <div class="content-frame" id="add-book-frame">
             <div class="content-header" id="add-book-header">
-                <div id="header">Edytuj Ksiązkę</div>
+                <div id="header">Edytuj Książkę</div>
                 <div id="description">Wypełnij poniższy formularz a następnie kliknij przycisk "Dodaj"<br>Kliknij przycisk 'Anuluj', jeżeli chcesz wrócić do listy książek</div>
             </div>
             <div class="content-data" id="add-book-content">
@@ -38,23 +39,23 @@
                     </div>
                     <div class="attribute" id="release-date">
                         <label class="medium-label" for="release-date">Data wydania</label>
-                        <input type="date" id="release-date-input" name="release-date"></input>
+                        <input type="text" id="release-date-input" name="release-date"></input>
                         <span class="errorfield" id="release-date-error"></span>
                     </div>
                     <div class="attribute" id="isbn">
-                        <label class="medium-label" for="title">ISBN</label>
+                        <label class="medium-label" for="isbn">ISBN</label>
                         <input type="text" id="isbn-input" name="isbn"></input>
                         <span class="errorfield" id="isbn-error"></span>
                     </div>
                     <div class="attribute" id="price">
-                        <label class="medium-label" for="title">Cena za dzień</label>
+                        <label class="medium-label" for="price">Cena za dzień</label>
                         <input type="text" id="price-input" name="price"></input>
                         <span class="errorfield" id="price-error"></span>
                     </div>
                 </div>
-                <div class="attribute-table" id="table-autors">
-                    <label class="medium-label" for="autors">Autorzy</label>
-                    <table class="selectable-table" id="autors" name="autors">
+                <div class="attribute-table" id="table-authors">
+                    <label class="medium-label" for="authors">Autorzy</label>
+                    <table class="selectable-table" id="authors" name="authors">
                         <thead>
                             <tr>
                                 <th>Imię</th>
@@ -62,10 +63,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Stephen</td>
-                                <td>King</td>
-                            </tr>
                         </tbody>
                     </table>
                     <div class="attribute-table-button">
@@ -73,40 +70,29 @@
                         <button class="medium-button" href="#">Usuń Autora</button>
                     </div>
                 </div>
+                <span class="errorfield" id="table-authors-error"></span>
                 <div class="attribute-table" id="table-copies">
-                    <label class="medium-label" for="autors">Egzemplarze</label>
-                    <table class="selectable-table" id="autors" name="autors">
+                    <label class="medium-label" for="copies">Egzemplarze</label>
+                    <table class="selectable-table" id="copies" name="copies">
                         <thead>
                             <tr>
-                                <th>Id</th>
-                                <th>Wypożyczony</th>
+                                <th>Numer</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Nie</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Nie</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Nie</td>
-                            </tr>
                         </tbody>
                     </table>
                     <div class="attribute-table-button">
-                        <button class="medium-button" href="#">Dodaj Autora</button>
-                        <button class="medium-button" href="#">Usuń Autora</button>
+                        <button class="medium-button" href="#">Dodaj Egzemplarz</button>
+                        <button class="medium-button" href="#">Usuń Egzemplarz</button>
                     </div>
                 </div>
+                <span class="errorfield" id="copies-error"></span>
             </div>
             <div class="content-footer">
                 <div  id="add-book-footer">
                     <button class="medium-button">Anuluj</button>
-                    <button class="medium-button">Zapisz</button>
+                    <button class="medium-button" onclick="validateBook()">Zapisz</button>
                 </div>
             </div>
         </div>
