@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../styles/styles.css"/>
+    <base href="../~">
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <script type="text/javascript" src="scripts.js"></script>
   </head>
   <body>
     <div class="page">
@@ -12,14 +14,14 @@
       </header>
       <div class="navbar">
         <div id="navbar-menu-items">
-          <button class=navbar-button>Strona Główna</button>
-          <button class=navbar-button>Książki</button>
-          <button class=navbar-button>Wypożyczenia</button>
-          <button class=navbar-button>Klienci</button>
-          <button class=navbar-button>Autorzy</button>
+          <a href="index.html"><button class=navbar-button>Strona Główna</button></a>
+          <a href="book/list.html"><button class=navbar-button>Książki</button></a>
+          <a href="rent/list.html"><button class=navbar-button>Wypożyczenia</button></a>
+          <a href="client/list.html"><button class=navbar-button>Klienci</button></a>
+          <a href="author/list.html"><button class=navbar-button>Autorzy</button></a>
         </div>
         <div id="navbar-menu-login">
-          <button class=navbar-button id="navbar-login">Logowanie</button>
+          <a href="login/index.html"><button class=navbar-button id="navbar-login">Logowanie</button></a>
         </div>
       </div>
       <div class="breadcrumbs">Strona Główna</div>
