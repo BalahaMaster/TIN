@@ -190,3 +190,23 @@ function elementAddText(element, text){
 function elementClearText(element){
     element.innerHTML = "";
 }
+
+function openModal(elementId){
+    console.log("open modal")
+    var modal = document.getElementById(elementId);
+    modal.style = "display: block;";
+}
+
+function closeModal(elementId){
+    console.log("close modal");
+    var modal = document.getElementById(elementId);
+    modal.style = "display: none;";
+}   
+
+var modalButton = document.getElementsByClassName("modal-btn");    
+
+
+modalButton.onclick = function(){
+    console.log("open modal")
+
+}

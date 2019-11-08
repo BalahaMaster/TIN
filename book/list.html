@@ -8,6 +8,18 @@
     <script type="text/javascript" src="scripts.js"></script>
   </head>
   <body>
+    <div id="delete-modal">
+      <div id="delete-modal-content">
+        <input type="image" src="resource/icons/icons8-close-window-32.png" id="delete-modal-close" onclick="closeModal('delete-modal')"></button>
+        <div id="delete-modal-message">
+          <span>Czy jesteś pewny, że chcesz usunąć tą ksiązkę?</span>
+        </div>
+        <div id="delete-modal-message">
+          <button class="medium-button" onclick="closeModal('delete-modal')">Nie</button>
+          <button class="medium-button" onclick="closeModal('delete-modal')">Tak</button>
+        </div>
+      </div>
+    </div>
     <div class="page">
       <header class="header">      
           <div class="header-logo">Biblioteka</div>
@@ -45,10 +57,10 @@
                 <tr>
                   <td>Władca Pierścieni: Dwie Wieże</td>
                   <td>J.R.R. Tolkien</td>
-                  <td>
-                    <input type="image" src="resource/icons/icons8-edit-32.png"></input>
-                    <input type="image" src="resource/icons/icons8-more-details-32.png"></input>
-                    <input type="image" src="resource//icons/icons8-trash-32.png"></input>
+                  <td class="center">
+                    <a href="book/edit.html"><input type="image" src="resource/icons/icons8-edit-32.png"></input></a>
+                    <a href="book/details.html"><input type="image" src="resource/icons/icons8-more-details-32.png"></input></a>
+                    <a class="modal-btn" onclick="openModal('delete-modal')"><input type="image" src="resource//icons/icons8-trash-32.png"></input></a>
                   </td>
                 </tr>
               </tbody>
