@@ -234,10 +234,6 @@ input{
     height: 25px;
 }
 
-.selectable-table tr{
-    border-bottom: 1px solid black;
-}
-
 .selectable-table tbody tr:hover{
     background-color: lightgray;
 }
@@ -377,7 +373,7 @@ body{
     border: 1px solid black;
     padding: 20px;
     background-color: #846075;
-    color: #F7f06d;
+    color: white;
     text-align: center;
     align-items: flex-end;
 }
@@ -419,9 +415,18 @@ body{
 } 
 
 .content-pagination{
-    margin: auto;
     justify-content: center;
+    height: 100%;
+    margin: auto;
 }
+
+.content-pagination a{
+    font-size: 20px;
+    width: 40px;
+    text-decoration: none;
+    color: #4D2D52;
+}
+
 #item-number-select{
     justify-content: center;
 }
