@@ -100,9 +100,18 @@ input{
 }
 
 #list-book-header{
+    display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 0;
+    align-items: flex-end;
+}
+
+#search-input{
+    height: 34px;
+    width: 400px;
+    float: right;
+    margin-left: 20px;
 }
 
 #add-rent-header{
@@ -128,7 +137,6 @@ input{
 }
 
 .content-footer{
-    display: grid;
     grid-area: 3 / 1 / 4 / 2;
 }
 
@@ -406,7 +414,7 @@ body{
 }
 
 #list-book-footer{    
-    display: grid;
+    display: flex;
     border-bottom: 1px solid black;
     border-right: 1px solid black;
     border-left:  1px solid black; 
@@ -416,19 +424,59 @@ body{
 
 .content-pagination{
     justify-content: center;
-    height: 100%;
-    margin: auto;
+    margin-left: auto;
 }
 
 .content-pagination a{
-    font-size: 20px;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
     width: 40px;
+    height: 40px;
     text-decoration: none;
+    background-color: white;
     color: #4D2D52;
+    border-left: 1px solid black;
+}
+
+.content-pagination a:hover{
+    background-color: gray;
+}
+
+.content-pagination a:active{
+    background-color:  #4D2D52;
+    color: white;
 }
 
 #item-number-select{
+    display: flex;
     justify-content: center;
+    float: right;
+}
+
+#item-number-select a{
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    background-color: white;
+    color: #4D2D52;
+    border-left: 1px solid black;
+}
+
+#item-number-select a:hover{
+    background-color: gray;
+}
+
+#item-number-select a:active{
+    background-color:  #4D2D52;
+    color: white;
 }
 
 .footer{

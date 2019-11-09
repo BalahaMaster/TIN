@@ -207,6 +207,5 @@ var modalButton = document.getElementsByClassName("modal-btn");
 
 
 modalButton.onclick = function(){
-    console.log("open modal")
-
+    console.log("open modal");
 }

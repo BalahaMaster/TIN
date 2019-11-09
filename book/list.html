@@ -40,9 +40,12 @@
       <div class="content">
         <div class="content-frame" id="list-book-frame">
           <div class="content-header" id="list-book-header">
-            <div class="content-add-button" id="list-book-add-button">
-              <a href="book/add.html"><button class="medium-button">Dodaj Książkę</button></a>
+            <a href="book/add.html"><button class="medium-button">Dodaj Książkę</button></a>
+            <div style="justify-content: flex-end;">
+                <input type="image" src="resource/icons/icons8-search-32.png" style="float: right; height: 40px; margin-left: 10px;">
+                <input type="text" id="search-input" name="search-input">
             </div>
+
           </div>
           <div class="content-date">
             <table class="selectable-table">
@@ -159,20 +162,18 @@
           </div>
           <div class="content-footer" id="list-book-footer">
             <div class="content-pagination">
-              <a href="#">&laquo;</a>
-              <a href="#">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">...</a>
-              <a href="#">15</a>
-              <a href="#">&raquo;</a>
+              <a href="book/list.html">&laquo;</a>
+              <a href="book/list.html">1</a>
+              <a href="book/list.html">2</a>
+              <a href="book/list.html">3</a>
+              <a href="book/list.html">...</a>
+              <a href="book/list.html">15</a>
+              <a href="book/list.html" style="border-right: 1px solid black">&raquo;</a>
             </div>   
-            <div id="item-number-select">                
-            <span>Wybierz ilość książek na stronie</span>
-              <select>
-                <option value="5">5</option>
-                <option value="10">10</option>
-              </select>
+            <div id="item-number-select" style="float: right; margin-left: auto;"> 
+              <a href="">5</a>
+              <a href="">10</a>
+              <a href="">20</a>
             </div>  
           </div>
         </div>
