@@ -9,45 +9,45 @@
   </head>
   <body>
     <div class="page">
-      <header class="header">      
-          <div class="header-logo">Biblioteka</div>
-      </header>
-      <div class="navbar">
-        <div id="navbar-menu-items">
-          <a href="index.html"><button class=navbar-button>Strona Główna</button></a>
-          <a href="book/list.html"><button class=navbar-button>Książki</button></a>
-          <a href="rent/list.html"><button class=navbar-button>Wypożyczenia</button></a>
-          <a href="client/list.html"><button class=navbar-button>Klienci</button></a>
-          <a href="author/list.html"><button class=navbar-button>Autorzy</button></a>
+    <header class="header">      
+            <a href="index.html"><image class="header-logo" src="resource\icons\icons8-library-100.png"></image></a>
+        </header>
+        <div class="navbar">
+            <div id="navbar-menu-items">
+                <a href="index.html" class="navbar-button"><image src="resource\icons\icons8-library-50.png" id="home-icon"></image></a>
+                <a href="book/list.html"><button class=navbar-button>Książki</button></a>
+                <a href="rent/list.html"><button class=navbar-button>Wypożyczenia</button></a>
+                <a href="rent/list.html"><button class=navbar-button>Klienci</button></a>
+                <a href="author/list.html"><button class=navbar-button>Autorzy</button></a>
+            </div>
+            <div id="navbar-menu-login">
+                <a href="login/index.html"><button class=navbar-button id="navbar-login">Logowanie</button></a>
+            </div>
         </div>
-        <div id="navbar-menu-login">
-          <a href="login/index.html"><button class=navbar-button id="navbar-login">Logowanie</button></a>
-        </div>
-      </div>
       <div class="breadcrumbs">Strona Główna</div>
       <div class="content">
         <div id="book-details-content-frame">
-            <div id="attributes">
+            <div class="attributes">
                 <div id="cover">
                     <img class="book-cover" src="https://ecsmedia.pl/c/wladca-pierscieni-tom-2-dwie-wieze-w-iext48097233.jpg">
                 </div>
                 <div id="title">Władca Pierścieni: Dwie wieże</div>
-                <div id="attribute-list">
-                    <div id="attribute">
-                        <div id="attribute-name">Autorzy:</div>
-                        <div id="autors">J.R.R. Tolkien</div>
+                <div class="attribute-list">
+                    <div class="attribute" id="authors">
+                        <div class="attribute-name">Autorzy:</div>
+                        <div class="attribute-value">J.R.R. Tolkien</div>
                     </div>
-                    <div id="attribute">
-                        <div id="attribute-name">Data wydania:</div>
-                        <div id="release-date">11-11-1954</div>
+                    <div class="attribute" id="release-date">
+                        <div class="attribute-name">Data wydania:</div>
+                        <div class="attribute-value">11-11-1954</div>
                     </div>
-                    <div id="attribute">
-                        <div id="attribute-name">ISBN:</div>
-                        <div id="isbn">978-2-12-345680-3</div>
+                    <div class="attribute" id="isbn">
+                        <div class="attribute-name">ISBN:</div>
+                        <div class="attribute-value">978-2-12-345680-3</div>
                     </div>
-                    <div id="attribute">
-                        <div id="attribute-name">Cena za dzień</div>
-                        <div id="price">3</div>
+                    <div class="attribute" id="price">
+                        <div class="attribute-name">Cena za dzień</div>
+                        <div class="attribute-value">3</div>
                     </div>
                 </div>
                 <div id="rental-count">
@@ -60,21 +60,24 @@
                 <table class="selectable-table" id="rents-table" name="Wypożyczenia">
                     <thead>
                         <tr>
-                            <th>Id Wypożyczenia</th>
+                            <th>Klient</th>
                             <th>Stan</th>
-                            <th>Id Egzemplarza</th>
+                            <th>Numer Egzemplarza</th>
+                            <th>Akcje</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="#">1233</a></td>
+                            <td>Stefan Kowalski</td>
                             <td>Zwrócne</td>
                             <td>1</td>
+                            <td class="center"><a href="rent/details.html"><input type="image" src="resource/icons/icons8-more-details-32.png"></input></a></td>
                         </tr>
                         <tr>
-                            <td><a href="#">333</a></td>
+                            <td>Mietek Kowalsi</td>
                             <td>Nie zwrócone</td>
                             <td>2</td>
+                            <td class="center"><a href="rent/details.html"><input type="image" src="resource/icons/icons8-more-details-32.png"></input></a></td>
                         </tr>
                     </tbody>
                 </table>
