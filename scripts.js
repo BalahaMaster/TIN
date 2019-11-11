@@ -219,11 +219,5 @@ function closeModal(elementId){
     console.log("close modal");
     var modal = document.getElementById(elementId);
     modal.style = "display: none;";
-}   
+}  
 
-var modalButton = document.getElementsByClassName("modal-btn");    
-
-
-modalButton.onclick = function(){
-    console.log("open modal");
-}
