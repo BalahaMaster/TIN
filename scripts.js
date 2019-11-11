@@ -80,6 +80,14 @@ function validateBook(){
     }
 }
 
+function validateCopy(){
+    console.log("Validating Copy");
+    var copy = document.getElementById("copy-number-input");
+    var copyErr = document.getElementById("copy-number-error");
+    elementClearText(copyErr);
+    return emptyStringValidation(copy, copyErr, "Numer egzemplarza nie może być pusty") && positiveNumberValidation(copy, copyErr);
+}
+
 function positiveNumberValidation(element, errorElement){
     
     var number = element.value;
@@ -89,6 +97,8 @@ function positiveNumberValidation(element, errorElement){
     var reg = /(?<!.)([0-9]+|[0-9]+\.{1}[0-9]+)(?!.)/
 
     var matches = number.match(reg);
+
+    var valid = true;
 
     if(matches == false || matches == null){
         elementValidationError(element);
@@ -101,12 +111,15 @@ function positiveNumberValidation(element, errorElement){
     if(isNaN(number)){
         elementValidationError(element);
         elementAddText(errorElement, "Podaj liczbę w formacie '3.14' bądź '1'");
+        valid = false;
     }
     
     if(number < 0){
         elementValidationError(element);
         elementAddText(errorElement, "Liczba musi być większa od zera");
+        valid = false;
     }
+    return valid;
 }
 
 function emailValidation(inputElement, errorElement){
@@ -195,6 +208,11 @@ function openModal(elementId){
     console.log("open modal")
     var modal = document.getElementById(elementId);
     modal.style = "display: block;";
+}
+
+function closeModalOnVal(elementId, valid){
+    console.log('Jestem walidowany')
+    valid ? closeModal(elementId) : false;
 }
 
 function closeModal(elementId){
