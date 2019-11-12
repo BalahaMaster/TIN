@@ -247,12 +247,34 @@ window.addEventListener("load", function(event){
 });
 
 function addSelected(fromTableId, toTableId){
-    var tableFrom = document.getElementById(fromTableId);
-    var tableTo = document.getElementById(toTableId);
+    let tableFrom = document.getElementById(fromTableId);
+    let tableTo = document.getElementById(toTableId);
 
-    var headers = tableFrom.getElementsByClassName('th');
-    for()
+    let selected = tableFrom.getElementsByClassName('tr-selected');
 
-    var selected = tableFrom.getElementsByClassName('tr-selected');
+    // creatimg object properites dynamicaly
+    
+    // var bojArr = [];
+    // let obj = {};
+
+
+    // for(var j = 0; j<seleceted.length; j++){
+    //     for(let i = 0; i<headers.length; i++){
+    //         obj[headers[i].textContent] = "";
+    //         console.log(headers[i].textContent);
+    //     }
+    
+    // }   
+    for(let i = 0; i<selected.length; i++){
+        tableBody = tableTo.getElementsByTagName("tbody")[0];
+        let newRow = tableBody.insertRow(tableBody.rows.length);
+        for(let j = 0; j<selected[i].children.length; j++){
+            let newCell = newRow.insertCell(j);
+            console.log(selected[i].children[j].textContent);
+            newCell.textContent = selected[i].children[j].textContent;
+        }
+    }
+        
+
     console.log(selected);
 }
