@@ -253,7 +253,8 @@ input{
 }
 
 .tr-selected{
-    background-color: gray;
+    background-color: darkgray;
+    color: white;
 }
 
 .attribute-table-button{

@@ -221,3 +221,31 @@ function closeModal(elementId){
     modal.style = "display: none;";
 }  
 
+window.addEventListener("load", function(event){
+    var classes = document.getElementsByClassName('selectable-table');
+    console.log(classes)
+    var i = classes.length;
+    console.log(i)
+    
+    while(i--){
+        console.log(i + ' wchodzę sobie')
+        classes[i].addEventListener("click", function(event){
+            var row = event.target.parentElement;
+            var tag = event.target.parentElement.tagName
+            if(tag == "TR"){
+                if(row.classList.contains("tr-selected")){
+                    row.classList.remove("tr-selected");
+                    console.log("removing selection")
+                }
+                else{
+                    row.classList.add("tr-selected");
+                    console.log("adding slection")
+                }
+            }
+        }, false);
+    }
+});
+
+function clearSelected(table){
+    
+}
