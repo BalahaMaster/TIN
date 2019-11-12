@@ -246,6 +246,13 @@ window.addEventListener("load", function(event){
     }
 });
 
-function clearSelected(table){
-    
+function addSelected(fromTableId, toTableId){
+    var tableFrom = document.getElementById(fromTableId);
+    var tableTo = document.getElementById(toTableId);
+
+    var headers = tableFrom.getElementsByClassName('th');
+    for()
+
+    var selected = tableFrom.getElementsByClassName('tr-selected');
+    console.log(selected);
 }
