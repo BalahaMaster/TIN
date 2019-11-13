@@ -9,28 +9,26 @@
   </head>
   <body>
     <div class="page">
-      <header class="header">      
-          <div class="header-logo">Biblioteka</div>
-      </header>
-      <div class="navbar">
-        <div id="navbar-menu-items">
-          <a href="index.html"><button class=navbar-button>Strona Główna</button></a>
-          <a href="book/list.html"><button class=navbar-button>Książki</button></a>
-          <a href="rent/list.html"><button class=navbar-button>Wypożyczenia</button></a>
-          <a href="client/list.html"><button class=navbar-button>Klienci</button></a>
-          <a href="author/list.html"><button class=navbar-button>Autorzy</button></a>
-        </div>
-        <div id="navbar-menu-login">
-          <a href="login/index.html"><button class=navbar-button id="navbar-login">Logowanie</button></a>
-        </div>
-      </div>
+        <header class="header">      
+            <a href="index.html"><image class="header-logo" src="resource\icons\icons8-library-100.png"></image></a>
+        </header>
+        <div class="navbar">
+            <div id="navbar-menu-items">
+                <a href="index.html" class="navbar-button"><image src="resource\icons\icons8-library-50.png" id="home-icon"></image></a>
+                <a href="book/list.html"><button class=navbar-button>Książki</button></a>
+                <a href="rent/list.html"><button class=navbar-button>Wypożyczenia</button></a>
+                <a href="client/list.html"><button class=navbar-button>Klienci</button></a>
+                <a href="author/list.html"><button class=navbar-button>Autorzy</button></a>
+            </div>
+            <div id="navbar-menu-login">
+                <a href="login/index.html"><button class=navbar-button id="navbar-login">Logowanie</button></a>
+            </div>
+        </div> 
         <div class="breadcrumbs">Strona Główna</div>
         <div class="content">
             <div class="content-frame" id="add-book-frame">
                 <div class="content-header" id="add-book-header">
                     <div id="header">Edytuj Klienta</div>
-                    <div id="description">Wypełnij poniższy formularz a następnie kliknij przycisk "Dodaj"<br>Kliknij
-                        przycisk 'Anuluj', jeżeli chcesz wrócić do listy książek</div>
                 </div>
                 <div class="content-data" id="add-book-content">
                     <div class="attribute-frame" id="add-book-attribute-frame">
@@ -58,7 +56,7 @@
                 </div>
                 <div class="content-footer">
                     <div id="add-book-footer">
-                        <button class="medium-button">Anuluj</button>
+                        <a href="client/list.html"><button class="medium-button">Anuluj</button></a>
                         <button class="medium-button" onclick="validateClient()">Zapisz</button>
                     </div>
                 </div>

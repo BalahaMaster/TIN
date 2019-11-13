@@ -298,8 +298,6 @@ function addCopyToBook(copyId, tableId, modalId){
     closeModal(modalId);
 }
 
-    
-
 
 function removeSelected(tableId){
     let table = document.getElementById(tableId).getElementsByTagName("tbody")[0];

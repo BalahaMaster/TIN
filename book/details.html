@@ -9,6 +9,18 @@
   </head>
   <body>
     <div class="page">
+    <div class="modal" id="delete-modal">
+      <div class="modal-content" id="delete-modal-content">
+        <input class="modal-close" type="image" src="resource/icons/icons8-close-window-32.png" id="delete-modal-close" onclick="closeModal('delete-modal')"></button>
+        <div id="delete-modal-message">
+          <span>Czy jesteś pewny, że chcesz usunąć to wypożyczenie?</span>
+        </div>
+        <div id="delete-modal-message">
+          <button class="medium-button" onclick="closeModal('delete-modal')">Nie</button>
+          <button class="medium-button" onclick="closeModal('delete-modal')">Tak</button>
+        </div>
+      </div>
+    </div>
     <header class="header">      
             <a href="index.html"><image class="header-logo" src="resource\icons\icons8-library-100.png"></image></a>
         </header>
@@ -53,15 +65,15 @@
                 <div id="rental-count">
                     <div id="attribute-name">Liczba wolnych egzemplarzy:</div>
                 </div>                
-                <div id=count>13</div>
+                <div id="count">13</div>
             </div>
             <div id="rents">
                 <label class="medium-label" for="rents-table">Wypożyczenia</label>
-                <table class="selectable-table" id="rents-table" name="Wypożyczenia">
+                <table id="rents-table" name="Wypożyczenia">
                     <thead>
                         <tr>
                             <th>Klient</th>
-                            <th>Stan</th>
+                            <th>Data Wypożyczenia</th>
                             <th>Numer Egzemplarza</th>
                             <th>Akcje</th>
                         </tr>
@@ -69,16 +81,24 @@
                     <tbody>
                         <tr>
                             <td>Stefan Kowalski</td>
-                            <td>Zwrócne</td>
+                            <td>2019-11-11</td>
                             <td>1</td>
-                            <td class="center"><a href="rent/details.html"><input type="image" src="resource/icons/icons8-more-details-32.png"></input></a></td>
-                        </tr>
+                             <td class="center">
+                                <a href="rent/edit.html"><input type="image" src="resource/icons/icons8-edit-32.png"></input></a>
+                                <a href="rent/details.html"><input type="image" src="resource/icons/icons8-more-details-32.png"></input></a>
+                                <a class="modal-btn" onclick="openModal('delete-modal')"><input type="image"
+                                    src="resource//icons/icons8-trash-32.png"></input></a>
+                            </td> </tr>
                         <tr>
                             <td>Mietek Kowalsi</td>
-                            <td>Nie zwrócone</td>
+                            <td>2019-09-19</td>
                             <td>2</td>
-                            <td class="center"><a href="rent/details.html"><input type="image" src="resource/icons/icons8-more-details-32.png"></input></a></td>
-                        </tr>
+                            <td class="center">
+                                <a href="rent/edit.html"><input type="image" src="resource/icons/icons8-edit-32.png"></input></a>
+                                <a href="rent/details.html"><input type="image" src="resource/icons/icons8-more-details-32.png"></input></a>
+                                <a class="modal-btn" onclick="openModal('delete-modal')"><input type="image"
+                                    src="resource//icons/icons8-trash-32.png"></input></a>
+                            </td></tr>
                     </tbody>
                 </table>
             </div>

@@ -9,64 +9,81 @@
   </head>
   <body>
     <div class="page">
+    <div class="modal" id="delete-modal">
+      <div class="modal-content" id="delete-modal-content">
+        <input class="modal-close" type="image" src="resource/icons/icons8-close-window-32.png" id="delete-modal-close" onclick="closeModal('delete-modal')"></button>
+        <div id="delete-modal-message">
+          <span>Czy jesteś pewny, że chcesz usunąć to wypożyczenie?</span>
+        </div>
+        <div id="delete-modal-message">
+          <button class="medium-button" onclick="closeModal('delete-modal')">Nie</button>
+          <button class="medium-button" onclick="closeModal('delete-modal')">Tak</button>
+        </div>
+      </div>
+    </div>
       <header class="header">      
-          <div class="header-logo">Biblioteka</div>
+        <a href="index.html"><image class="header-logo" src="resource\icons\icons8-library-100.png"></image></a>
       </header>
       <div class="navbar">
         <div id="navbar-menu-items">
-          <a href="index.html"><button class=navbar-button>Strona Główna</button></a>
-          <a href="book/list.html"><button class=navbar-button>Książki</button></a>
-          <a href="rent/list.html"><button class=navbar-button>Wypożyczenia</button></a>
-          <a href="client/list.html"><button class=navbar-button>Klienci</button></a>
-          <a href="author/list.html"><button class=navbar-button>Autorzy</button></a>
+            <a href="index.html" class="navbar-button"><image src="resource\icons\icons8-library-50.png" id="home-icon"></image></a>
+            <a href="book/list.html"><button class=navbar-button>Książki</button></a>
+            <a href="rent/list.html"><button class=navbar-button>Wypożyczenia</button></a>
+            <a href="client/list.html"><button class=navbar-button>Klienci</button></a>
+            <a href="author/list.html"><button class=navbar-button>Autorzy</button></a>
         </div>
         <div id="navbar-menu-login">
-          <a href="login/index.html"><button class=navbar-button id="navbar-login">Logowanie</button></a>
+            <a href="login/index.html"><button class=navbar-button id="navbar-login">Logowanie</button></a>
         </div>
-      </div>
+      </div> 
       <div class="breadcrumbs">Strona Główna</div>
       <div class="content">
         <div id="client-details-content-frame">
-            <div id="attributes">
-                <div id="attribute-list">
-                    <div id="attribute">
-                        <div id="attribute-name">Imię:</div>
-                        <div id="firstname">Paweł</div>
-                    </div> 
-                    <div id="attribute">
-                        <div id="attribute-name">Data Urodzenia:</div>
-                        <div id="brithdate">13-12-1970</div>
-                    </div>
-                    <div id="attribute">
-                        <div id="attribute-name">Nazwisko:</div>
-                        <div id="lastname">Nowak</div>
-                    </div>
-                    <div id="attribute">
-                        <div id="attribute-name">Aktywny:</div>
-                        <div id="price">Tak</div>
-                    </div>
+            <div class="attributes">
+                <div class="attribute-list">
+                    <div class="attribute-name">Imię:</div>
+                    <div class="attribute-value" id="firstname">Paweł</div>
+                    <div class="attribute-name"> Nazwisko:</div>
+                    <div class="attribute-value" id="lastname">Nowak</div>
+                    <div class="attribute-name">Data Urodzenia:</div>
+                    <div class="attribute-value" id="birthdate">13-12-1970</div>
+                    <div class="attribute-name">Aktywny:</div>
+                    <div class="attribute-value" id="active">Tak</div>
                 </div>             
             </div>
-            <div id="rents">
+            <div id="rents" style="margin-top: 20px;">
                 <label class="medium-label" for="rents-table">Wypożyczenia</label>
-                <table class="selectable-table" id="rents-table" name="Wypożyczenia">
+                <table id="rents-table" name="Wypożyczenia">
                     <thead>
                         <tr>
-                            <th>Id Wypożyczenia</th>
-                            <th>Stan</th>
-                            <th>Id Egzemplarza</th>
+                            <th>Tytuł Ksiązki</th>
+                            <th>Data wypożyczenia</th>
+                            <th>Data zwrotu</th>
+                            <th>Akcje</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="#">1233</a></td>
-                            <td>Zwrócne</td>
-                            <td>1</td>
+                            <td>Władca Pierścieni: Dwie Wieże</td>
+                            <td>2019-11-05</td>
+                            <td>2019-11-12</td>
+                            <td class="center">
+                                <a href="rent/edit.html"><input type="image" src="resource/icons/icons8-edit-32.png"></input></a>
+                                <a href="rent/details.html"><input type="image" src="resource/icons/icons8-more-details-32.png"></input></a>
+                                <a class="modal-btn" onclick="openModal('delete-modal')"><input type="image"
+                                    src="resource//icons/icons8-trash-32.png"></input></a>
+                            </td>
                         </tr>
                         <tr>
-                            <td><a href="#">333</a></td>
-                            <td>Nie zwrócone</td>
-                            <td>2</td>
+                            <td>Biały Kieł</td>
+                            <td>2019-11-05</td>
+                            <td></td>
+                            <td class="center">
+                                <a href="rent/edit.html"><input type="image" src="resource/icons/icons8-edit-32.png"></input></a>
+                                <a href="rent/details.html"><input type="image" src="resource/icons/icons8-more-details-32.png"></input></a>
+                                <a class="modal-btn" onclick="openModal('delete-modal')"><input type="image"
+                                    src="resource//icons/icons8-trash-32.png"></input></a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
