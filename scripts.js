@@ -56,8 +56,8 @@ function validateBook(){
     if(dateFormatValidation(releaseDate, releaseDateErr, "Podaj datę w następującym formacie: 2019(rok)-01(miesiąć)-01(dzień)")){
         if(new Date(releaseDate.value) > Date.now()){
             valid = false;
-            elementValidationError(releaseDateErr);
-            elementAddText("Data wydania nie może być większa od daty dzisiejszej");
+            elementValidationError(releaseDate);
+            elementAddText(releaseDateErr, "Data wydania nie może być większa od daty dzisiejszej");
         }
     }
     else{
@@ -307,4 +307,35 @@ function removeSelected(tableId){
             table.deleteRow(i);
         }
     }
+}
+
+function addClient(fromTableId){
+    var firstname = document.getElementById('firstname');
+    var lastname = document.getElementById('lastname');
+
+    
+    var tableFrom = document.getElementById(fromTableId);
+    var selected = tableFrom.getElementsByClassName('tr-selected');  
+    var tableErr = document.getElementById('modal-table-client-error');
+    elementClearText(tableErr);
+    console.log(tableErr)
+
+    if(selected.length != 1){
+        elementAddText(tableErr, "Musisz wybrać jednego klienta");
+    }
+    else{
+        firstname.textContent = selected[0].children[0].textContent;
+        console.log(selected[0].children[0].textContent)
+        lastname.textContent = selected[0].children[1].textContent;
+        closeModal("add-client-modal")
+    }
+}
+
+function removeClient(){
+    console.log("jestem")
+    var firstname = document.getElementById('firstname');
+    var lastname = document.getElementById('lastname');
+
+    firstname.textContent = "";
+    lastname.textContent = "";
 }
