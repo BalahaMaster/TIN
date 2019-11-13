@@ -142,18 +142,20 @@
                 <div id="header">Wypożycz</div>
             </div>
             <div class="content-data" id="add-rent-data">
-                <div class="attribute-table" id="table-clients">
-                    <label class="medium-label" for="clients" style="text-align: center">Klienci</label>
-                        <div class="attribute-list">
+                <div id="rent-add">
+                    <div class="attributes">
+                    <label class="medium-label" for="client" style="margin-left: 5px;">Klient</label>
+                        <div class="attribute-list" id-"client">
                             <div class="attribute" id="authors">
-                                <div class="attribute-name">Autorzy:</div>
-                                <div class="attribute-value">J.R.R. Tolkien</div>
+                                <div class="attribute-name">Imię:</div>
+                                <div class="attribute-value" id="firstname"></div>
                             </div>
                             <div class="attribute" id="release-date">
-                                <div class="attribute-name">Data wydania:</div>
-                                <div class="attribute-value">11-11-1954</div>
+                                <div class="attribute-name">Nazwisko:</div>
+                                <div class="attribute-value" id="lastname"></div>
                             </div>
                         </div>
+                    </div>
                     <div class="attribute-table-button">
                         <button onclick="openModal('add-client-modal')" class="medium-button" href="#">Dodaj Klienta</button>
                         <button onclick="removeSelected('clients')" class="medium-button" href="#">Usuń Klienta</button>

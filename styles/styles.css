@@ -833,3 +833,22 @@ header{
     background-color: gray;
 }
 
+#rent-add .attributes .attribute-list .attribute{
+    display: grid;
+    align-items: center;
+    font-size: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin-left: 5px;
+}
+
+#rent-add .attributes .attribute-name{
+    margin-right: 20px;
+    font-weight: 700;
+    grid-column-start: 1;
+}
+
+#rent-add .attributes .attribute-value{
+    margin-right: 20px;
+    grid-column-start: 2;
+}
