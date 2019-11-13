@@ -9,12 +9,24 @@
   </head>
   <body>
     <div class="page">
+      <div class="modal" id="delete-modal">
+        <div class="modal-content" id="delete-modal-content">
+          <input class="modal-close" type="image" src="resource/icons/icons8-close-window-32.png" id="delete-modal-close" onclick="closeModal('delete-modal')"></button>
+          <div id="delete-modal-message">
+            <span>Czy jesteś pewny, że chcesz usunąć wypożyczenie?</span>
+          </div>
+          <div id="delete-modal-message">
+            <button class="medium-button" onclick="closeModal('delete-modal')">Nie</button>
+            <button class="medium-button" onclick="closeModal('delete-modal')">Tak</button>
+          </div>
+        </div>
+      </div>
       <header class="header">      
-          <div class="header-logo">Biblioteka</div>
+        <a href="index.html"><image class="header-logo" src="resource\icons\icons8-library-100.png"></image></a>
       </header>
       <div class="navbar">
         <div id="navbar-menu-items">
-          <a href="index.html"><button class=navbar-button>Strona Główna</button></a>
+          <a href="index.html" class="navbar-button"><image src="resource\icons\icons8-library-50.png" id="home-icon"></image></a>
           <a href="book/list.html"><button class=navbar-button>Książki</button></a>
           <a href="rent/list.html"><button class=navbar-button>Wypożyczenia</button></a>
           <a href="client/list.html"><button class=navbar-button>Klienci</button></a>
@@ -23,49 +35,85 @@
         <div id="navbar-menu-login">
           <a href="login/index.html"><button class=navbar-button id="navbar-login">Logowanie</button></a>
         </div>
-      </div>
+      </div> 
       <div class="breadcrumbs">Strona Główna</div>
       <div class="content">
         <div class="content-frame">
-          <div class="content-header">
-            <div class="content-add-button" id="list-rent-add-button">
-             <button class="medium-button">Wypożycz ksiązkę</button>
+          <div class="content-header" id="list-rent-header">
+            <a href="rent/add.html"><button class="medium-button">Wypożycz Książkę</button></a>
+            <div style="justify-content: flex-end;">
+                <input type="image" src="resource/icons/icons8-search-32.png" style="float: right; height: 40px; margin-left: 10px;">
+                <input type="text" id="search-input" name="search-input">
             </div>
+            <div id="item-number-select" style="float: right; margin-left: auto;"> 
+              <a href="book/list.html">5</a>
+              <a href="book/list.html">10</a>
+              <a href="book/list.html">20</a>
+            </div>  
           </div>
           <div class="content-data">
-            <div class="content-item-list">
-              <div class="content-item" id="rent-item">
-                <div class="rent-client-name"><span style="font-weight: 700" id="attribute-name">Klient: </span><span>Marcin Maziarz</span></div>
-                <div class="rent-book-title"><span style="font-weight: 700" id="attribute-name">Tytuł: </span><span>Władca Pierścieni: Dwie Wieże</span></div>
-                <div class="rent-start-date"><span style="font-weight: 700" id="attribute-name">Data Wypozyczenia: </span><span>10-11-2137</span></div>
-                <div class="rent-end-date"><span style="font-weight: 700" id="attribute-name">Data Zwrotu: </span><span>12-11-2137</span></div>
-                <div class="rent-id"><span style="font-weight: 700" id="attribute-name">Id Wypożyczenia: </span><span>1</span></div>
-                <div class="list-item-buttons" id="list-item-rent-buttons">
-                  <a href="#" class="list-item-button">Edytuj</a>
-                  <a  href="#" class="list-item-button">Usuń</a>
-                  <a  href="#" class="list-item-button">Pokaż więcej</a>
-                </div>
-              </div>
+            <table id="rent-list-table">
+              <thead>
+                <tr>
+                  <th>Klient</th>
+                  <th>Książka</th>
+                  <th>Data Wypożyczenia</th>
+                  <th>Data Zwrotu</th>
+                  <th>Akcje</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id='1'>
+                  <td>Jan Kowalski</td>
+                  <td>Władca Pierścieni: Dwie Wieże</td>
+                  <td>2019-11-01</td>
+                  <td>2019-11-09</td>
+                  <td class="center">
+                    <a href="rent/edit.html"><input type="image" src="resource/icons/icons8-edit-32.png"></input></a>
+                    <a href="rent/details.html"><input type="image" src="resource/icons/icons8-more-details-32.png"></input></a>
+                    <a class="modal-btn" onclick="openModal('delete-modal')"><input type="image"
+                        src="resource//icons/icons8-trash-32.png"></input></a>
+                  </td>
+                </tr>
+                <tr id='2'>
+                  <td>Kuba Kowalski</td>
+                  <td>Harry Poter: Więzień Azkabanu</td>
+                  <td>2019-11-06</td>
+                  <td></td>
+                  <td class="center">
+                    <a href="rent/edit.html"><input type="image" src="resource/icons/icons8-edit-32.png"></input></a>
+                    <a href="rent/details.html"><input type="image" src="resource/icons/icons8-more-details-32.png"></input></a>
+                    <a class="modal-btn" onclick="openModal('delete-modal')"><input type="image"
+                        src="resource//icons/icons8-trash-32.png"></input></a>
+                  </td>
+                </tr>
+                <tr id='3'>
+                  <td>Jarosław Bogiel</td>
+                  <td>Powrót z Gwiazd</td>
+                  <td>2019-09-01</td>
+                  <td>2019-10-09</td>
+                  <td class="center">
+                    <a href="rent/edit.html"><input type="image" src="resource/icons/icons8-edit-32.png"></input></a>
+                    <a href="rent/details.html"><input type="image" src="resource/icons/icons8-more-details-32.png"></input></a>
+                    <a class="modal-btn" onclick="openModal('delete-modal')"><input type="image"
+                        src="resource//icons/icons8-trash-32.png"></input></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>   
+          </div>
+           <div class="content-footer"  id="list-book-footer">
+            <div class="content-pagination">
+              <a href="book/list.html">&laquo;</a>
+              <a href="book/list.html">1</a>
+              <a href="book/list.html">2</a>
+              <a href="book/list.html">3</a>
+              <a href="book/list.html">...</a>
+              <a href="book/list.html">15</a>
+              <a href="book/list.html" style="border-right: 1px solid black">&raquo;</a>
             </div>   
           </div>
-          <div class="content-footer">
-            <div class="content-pagination">
-              <a href="#">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>
-            </div>   
-            <div id="item-number-select">                
-            <span>Wybierz ilość książek na stronie</span>
-              <select>
-                <option value="5">5</option>
-                <option value="10">10</option>
-              </select>
-            </div>  
-          </div>          
         </div>
-        
       </div>
     </div>
     <div class="footer">System do zarządzanie biblioteką 2019</div>

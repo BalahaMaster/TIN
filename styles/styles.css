@@ -107,6 +107,14 @@ input{
     align-items: flex-end;
 }
 
+#list-rent-header{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    align-items: flex-end;
+}
+
 #search-input{
     height: 34px;
     width: 400px;
