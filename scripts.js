@@ -34,38 +34,51 @@ function validateClient(){
 }
 
 function validateBook(){
+    let valid = true;
+    
     var title = document.getElementById("title-input");
     var titleErr = document.getElementById("title-error");
     elementClearText(titleErr);
-    emptyStringValidation(title, titleErr, "Tytuł nie może być pusty")
+    valid = valid && emptyStringValidation(title, titleErr, "Tytuł nie może być pusty");
+    console.log(valid);
 
     var isbn = document.getElementById("isbn-input");
     var isbnErr = document.getElementById("isbn-error");
     elementClearText(isbnErr);
-    emptyStringValidation(isbn, isbnErr, "ISBN nie może być pusty")
+    valid = emptyStringValidation(isbn, isbnErr, "ISBN nie może być pusty") && valid;
+    console.log(valid);
 
     var releaseDate = document.getElementById("release-date-input");
     var releaseDateErr = document.getElementById("release-date-error");
     elementClearText(releaseDateErr);
-    emptyStringValidation(releaseDate, releaseDateErr, "Data wydania nie może być pusta");
+    valid = emptyStringValidation(releaseDate, releaseDateErr, "Data wydania nie może być pusta")  && valid;
+    console.log(valid);
     if(dateFormatValidation(releaseDate, releaseDateErr, "Podaj datę w następującym formacie: 2019(rok)-01(miesiąć)-01(dzień)")){
         if(new Date(releaseDate.value) > Date.now()){
+            valid = false;
             elementValidationError(releaseDateErr);
             elementAddText("Data wydania nie może być większa od daty dzisiejszej");
         }
+    }
+    else{
+        valid = false;
     }
 
     var price = document.getElementById("price-input");
     var priceErr = document.getElementById("price-error");
     elementClearText(priceErr);
-    emptyStringValidation(price, priceErr, "Cena nie może być pusta");
-    positiveNumberValidation(price, priceErr);
+    valid = emptyStringValidation(price, priceErr, "Cena nie może być pusta") && valid;
+    console.log(valid);
+    valid = positiveNumberValidation(price, priceErr)  && valid;
+    console.log(valid);
 
     var authors = document.getElementById("authors");
     var authorsErr = document.getElementById("table-authors-error");
     elementClearText(authorsErr);
     console.log(authors.rows.length);
     if(authors.rows.length < 2){
+        valid = false;
+        console.log(valid);
         elementValidationError(authors);
         elementAddText(authorsErr, "Ksiązka musi posiadać przynajmniej jednego autora");
     }
@@ -75,9 +88,13 @@ function validateBook(){
     elementClearText(copiesErr);
     console.log(copies.rows.length);
     if(copies.rows.length < 2){
+        valid = false;
+        console.log(valid);
         elementValidationError(copies);
         elementAddText(copiesErr, "Ksiązka musi posiadać przynajmniej jeden egzemplarz");
     }
+
+    return valid;
 }
 
 function validateCopy(){
@@ -228,7 +245,6 @@ window.addEventListener("load", function(event){
     console.log(i)
     
     while(i--){
-        console.log(i + ' wchodzę sobie')
         classes[i].addEventListener("click", function(event){
             var row = event.target.parentElement;
             var tag = event.target.parentElement.tagName
@@ -246,35 +262,51 @@ window.addEventListener("load", function(event){
     }
 });
 
-function addSelected(fromTableId, toTableId){
-    let tableFrom = document.getElementById(fromTableId);
-    let tableTo = document.getElementById(toTableId);
+function addSelecteTable2Table(fromTableId, toTableId){
+    var tableFrom = document.getElementById(fromTableId);
+    var tableTo = document.getElementById(toTableId);
 
-    let selected = tableFrom.getElementsByClassName('tr-selected');
+    var selected = tableFrom.getElementsByClassName('tr-selected');    
+    var tableBody = tableTo.getElementsByTagName("tbody")[0];
 
-    // creatimg object properites dynamicaly
-    
-    // var bojArr = [];
-    // let obj = {};
-
-
-    // for(var j = 0; j<seleceted.length; j++){
-    //     for(let i = 0; i<headers.length; i++){
-    //         obj[headers[i].textContent] = "";
-    //         console.log(headers[i].textContent);
-    //     }
-    
-    // }   
-    for(let i = 0; i<selected.length; i++){
-        tableBody = tableTo.getElementsByTagName("tbody")[0];
-        let newRow = tableBody.insertRow(tableBody.rows.length);
-        for(let j = 0; j<selected[i].children.length; j++){
+    for(i = 0; i<selected.length; i++){
+        console.log(selected.length);
+        console.log(selected);
+        console.log(selected[i]);
+        var newRow = tableBody.insertRow(tableBody.rows.length);
+        for(j = 0; j<selected[i].children.length; j++){
             let newCell = newRow.insertCell(j);
-            console.log(selected[i].children[j].textContent);
             newCell.textContent = selected[i].children[j].textContent;
         }
     }
-        
+    [].forEach.call(tableFrom.getElementsByTagName("tbody")[0].getElementsByTagName("tr"), function(el){
+        el.classList.remove("tr-selected");
+    });
+} 
 
-    console.log(selected);
+function addCopyToBook(copyId, tableId, modalId){
+    if(!validateCopy()) return;
+
+    var copy = document.getElementById(copyId);
+    var table = document.getElementById(tableId);
+
+    var tableBody = table.getElementsByTagName("tbody")[0];
+    var newRow = tableBody.insertRow(tableBody.rows.length);
+    var newCell = newRow.insertCell(0);
+    newCell.textContent = copy.value;
+
+    closeModal(modalId);
+}
+
+    
+
+
+function removeSelected(tableId){
+    let table = document.getElementById(tableId).getElementsByTagName("tbody")[0];
+    let rows = table.rows;
+    for(i = 0; i<rows.length; i++){
+        if(rows[i].classList.contains("tr-selected")){
+            table.deleteRow(i);
+        }
+    }
 }

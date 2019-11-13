@@ -56,7 +56,7 @@
                         </tbody>
                     </table>
                     <div class="attribute-table-button">
-                        <button onclick="addSelected('modal-authors','authors')" class="medium-button" href="#">Wybierz Autora</button>
+                        <button onclick="addSelecteTable2Table('modal-authors','authors');closeModal('add-author-modal');" class="medium-button" href="#">Wybierz Autora</button>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                         <input type="text" id="copy-number-input" name="title"></input>
                         <span class="errorfield" id="copy-number-error"></span>
                     </div>
-                    <button class="medium-button"  onclick="closeModalOnVal('add-copy-modal' ,validateCopy())">Zapisz</button>
+                    <button class="medium-button"  onclick="addCopyToBook('copy-number-input', 'copies', 'add-copy-modal')">Zapisz</button>
                 </div>
             </div>
         </div>
@@ -132,7 +132,7 @@
                     </table>
                     <div class="attribute-table-button">
                         <button onclick="openModal('add-author-modal')" class="medium-button" href="#">Dodaj Autora</button>
-                        <button class="medium-button" href="#">Usuń Autora</button>
+                        <button onclick="removeSelected('authors')" class="medium-button" href="#">Usuń Autora</button>
                     </div>
                 </div>
                 <span class="errorfield" id="table-authors-error"></span>
