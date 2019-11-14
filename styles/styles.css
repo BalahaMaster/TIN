@@ -154,6 +154,11 @@ input{
     justify-content: flex-end
 }
 
+#add-rent-footer{
+    display: flex;
+    justify-content: center;
+}
+
 #add-book-header #description{
     margin-top: 10px;
     height: auto;
@@ -184,22 +189,26 @@ input{
 #details-rent-attribute-frame .attribute-list{
     display: grid;
     grid-area: 1/1/2/2;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:  1fr;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;    
+    font-size: 20px;
 }
 
 #details-rent-attribute-frame .attribute-list .attribute{
     display: flex;
     align-items: center;
-    font-size: 20px;
 }
 
 #details-rent-attribute-frame .attribute-list .attribute-name{
     font-weight: 700;
     margin-right: 20px;
-    grid-area: 1/1/2/2;
+    grid-column-start: 1;
 }
 
+#details-rent-attribute-frame .attribute-list .attribute-value{
+    margin-right: 20px;
+    grid-column-start: 2;
+}
 
 #add-book-attribute-frame .attribute{
     display: grid;
@@ -836,8 +845,8 @@ header{
 #rent-add .attributes .attribute-list .attribute{
     display: grid;
     align-items: center;
-    font-size: 20px;
-    grid-template-columns: 1fr 1fr;
+    font-size: 40px;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: auto;
     margin-left: 5px;
 }

@@ -86,29 +86,22 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Stephen King</td>
-                                <td>Lśnienie</td>
+                                <td>Marek Szczepkowski</td>
+                                <td>Zabawne, nie?</td>
                                 <td>123-123-321-1</td>
                                 <td>2</td>
                                 <td>12</td>
                             </tr>
                             <tr>
-                                <td>Stephen King</td>
-                                <td>Lśnienie</td>
+                                <td>Marcin Maziarz</td>
+                                <td>Wyspa Przeprostów</td>
                                 <td>123-123-321-1</td>
                                 <td>2</td>
                                 <td>12</td>
                             </tr>
                             <tr>
-                                <td>Stephen King</td>
-                                <td>Lśnienie</td>
-                                <td>123-123-321-1</td>
-                                <td>2</td>
-                                <td>12</td>
-                            </tr>
-                            <tr>
-                                <td>Stephen King</td>
-                                <td>Lśnienie</td>
+                                <td>Jan Wojciechowski</td>
+                                <td>Przewodnik po Katowicach</td>
                                 <td>123-123-321-1</td>
                                 <td>2</td>
                                 <td>12</td>
@@ -140,20 +133,15 @@
       <div class="content">
         <div class="content-frame" id="add-rent-frame">
             <div class="content-header" id="add-rent-header">
-                <div id="header">Wypożycz</div>
+                <div id="header">Dodaj Wypożyczenie</div>
             </div>
             <div class="content-data" id="add-rent-data">
-                <div id="rent-add">
+                <div id="rent-add" style="margin-bottom: 20px;">
                     <div class="attributes">
-                    <label class="medium-label" for="client" style="margin-left: 5px;">Klient</label>
                         <div class="attribute-list" id-"client">
-                            <div class="attribute" id="authors">
-                                <div class="attribute-name">Imię:</div>
-                                <div class="attribute-value" id="firstname"></div>
-                            </div>
-                            <div class="attribute" id="release-date">
-                                <div class="attribute-name">Nazwisko:</div>
-                                <div class="attribute-value" id="lastname"></div>
+                            <div class="attribute" id="client">
+                                <div class="attribute-name" style="font-weight: 100; font-size: 35px">Klient:</div>
+                                <div class="attribute-value" ><span id="firstname"></span> <span id="lastname"></span></div>
                             </div>
                         </div>
                     </div>
@@ -161,14 +149,15 @@
                         <button onclick="openModal('add-client-modal')" class="medium-button" href="#">Dodaj Klienta</button>
                         <button onclick="removeClient()" class="medium-button" href="#">Usuń Klienta</button>
                     </div>
+                    <span class="errorfield" id="client-error"></span>
                 </div>
                 <div class="attribute-table" id="table-books">
                     <label class="medium-label" for="books">Książki</label>
                     <table class="selectable-table" id="books" name="books">
                         <thead>
                             <tr>
-                                <th>Id</th>
                                 <th>Autor</th>
+                                <th>Tytuł</th>
                                 <th>ISBN</th>
                                 <th>Cena</th>
                                 <th>Numer Egzemplarza</th>
@@ -177,13 +166,19 @@
                         <tbody>
                         </tbody>
                     </table>
-                    <div class="attribute-table-button">
+                    <span class="errorfield" id="book-error"></span>
+                    <div class="attribute-table-button"> 
                         <button onclick="openModal('add-book-modal')" class="medium-button" href="#">Dodaj Książkę</button>
                         <button onclick="removeSelected('books')" class="medium-button" href="#">Usuń Kiążkę</button>
                     </div>
                 </div>
             </div>
-            <div class="content-buttons"></div>
+            <div class="content-footer">
+                <div  id="add-rent-footer"  style="justify-content: flex-end;">
+                    <a href="rent/list.html"><button class="medium-button">Anuluj</button></a>
+                    <a><button class="medium-button" onclick="validateRent()">Zapisz</button></a>
+                </div>
+            </div>
         </div>
       </div>
     </div>

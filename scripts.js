@@ -105,6 +105,36 @@ function validateCopy(){
     return emptyStringValidation(copy, copyErr, "Numer egzemplarza nie może być pusty") && positiveNumberValidation(copy, copyErr);
 }
 
+function validateRent(){
+    var clientError = document.getElementById("client-error");
+    console.log(clientError)
+    var bookError = document.getElementById("book-error");
+    elementClearText(clientError);
+    elementClearText(bookError);
+
+    var client = document.getElementById("client");
+    console.log(client);
+    var clientName = document.getElementById("firstname").textContent + document.getElementById("lastname").textContent 
+    console.log(clientName)
+    
+    if(!validateStringNotEmpty(clientName)){
+        elementAddText(clientError, "Musisz wybrać klienta");
+    }
+    else{
+        elementValidationOk(clientError)
+    }
+
+    var books = document.getElementById("books");
+    elementClearText(bookError);
+    console.log(books.rows.length);
+    if(books.rows.length < 2){
+        valid = false;
+        console.log(valid);
+        elementAddText(bookError, "Przynajmniej jedna książka musi zostać wybrana");
+    }
+
+}
+
 function positiveNumberValidation(element, errorElement){
     
     var number = element.value;
@@ -329,6 +359,10 @@ function addClient(fromTableId){
         lastname.textContent = selected[0].children[1].textContent;
         closeModal("add-client-modal")
     }
+
+    [].forEach.call(tableFrom.getElementsByTagName("tbody")[0].getElementsByTagName("tr"), function(el){
+        el.classList.remove("tr-selected");
+    });
 }
 
 function removeClient(){

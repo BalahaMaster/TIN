@@ -32,61 +32,30 @@
             </div>
             <div class="content-data" id="details-rent-content-data">
                 <div class="attribute-frame" id="details-rent-attribute-frame">
-                    <div id="attribute-list">
-                        <div id="attribute">
-                            <div id="attribute-name">ID Wypozyczenia:</div>
-                            <div id="rent-id">1</div>
-                        </div>
-                        <div id="attribute">
-                            <div id="attribute-name">Data wypożyczenia:</div>
-                            <div id="rent-date">11-11-2044</div>
-                        </div>
-                        <div id="attribute">
-                            <div id="attribute-name">Kwota do zapłaty:</div>
-                            <div id="price">978 zł</div>
-                        </div>
-                        <div id="attribute">
-                            <div id="attribute-name">Data zwrotu:</div>
-                            <div id="return-date"></div>
-                        </div>
+                    <div class="attribute-list">
+                            <div class="attribute-name">Klient:</div>
+                            <div class="attribute-value"><span id="firstname">Łukasz</span> <span id="lastname">Dębski</span><a href="client/details.html" ><image src="resource/icons/icons8-more-details-32.png" style="height: 20px; widthL 20px;"></image></a></div>
+                            <div class="attribute-name">Data wypożyczenia:</div>
+                            <div class="attribute-value" id="rent-date">11-11-2042</div>
+                            <div class="attribute-name">Kwota do zapłaty:</div>
+                            <div class="attribute-value" id="price">978 zł</div>
+                            <div class="attribute-name">Data zwrotu:</div>
+                            <div class="attribute-value" id="return-date">11-11-2044</div>
                     </div>
-                </div>
-                <div class="attribute-table" id="table-clients">
-                    <label class="medium-label" for="clients">Klienci</label>
-                    <table class="selectable-table" id="clients" name="clients">
-                        <thead>
-                            <tr>
-                                <th>Imię</th>
-                                <th>Nazwisko</th>
-                                <th>Data Urodzenia</th>
-                                <th>ID</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Jan</td>
-                                <td>Kowalski</td>
-                                <td>01-01-1969</td>
-                                <td>1</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
                 <div class="attribute-table" id="table-copies">
                     <label class="medium-label" for="copies">Książki</label>
-                    <table class="selectable-table" id="copies" name="copies">
+                    <table id="copies" name="copies">
                         <thead>
                             <tr>
-                                <th>Id</th>
                                 <th>Autor</th>
                                 <th>ISBN</th>
-                                <th>ID Egzemplarza</th>
+                                <th>Numer Egzemplarza</th>
                                 <th>Cena</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
                                 <td>Jan Nowak</td>
                                 <td>12321-32312-1321-3</td>
                                 <td>13</td>
